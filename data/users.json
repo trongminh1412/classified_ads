@@ -1,0 +1,24 @@
+[
+    {
+        "username": "minhdev98",
+        "phone": "0706169163",
+        "email": "a@gmail.com",
+        "confirmPassword": "123456",
+        "acceptTerm": true,
+        "hash": "$2a$10$tfGibLsayW3jBuNQoMxidODeUwmBjWlu.4u2mizLw/KU24gX469.y",
+        "id": 1,
+        "dateCreated": "2022-01-07T08:27:10.421Z",
+        "dateUpdated": "2022-01-07T08:27:10.421Z"
+    },
+    {
+        "username": "test@gmail.com",
+        "phone": "0706169163",
+        "email": "s@gmail.com",
+        "confirmPassword": "123456",
+        "acceptTerm": true,
+        "hash": "$2a$10$hzCWnBGKKtZ4kiNR8ZxW2OmcLPceBsnZeecbh9Vlqx/ZNGxsi4wqe",
+        "id": 2,
+        "dateCreated": "2022-01-07T15:11:13.741Z",
+        "dateUpdated": "2022-01-07T15:11:13.741Z"
+    }
+]

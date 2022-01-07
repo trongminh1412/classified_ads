@@ -1,0 +1,30 @@
+$black_color: #222222;
+$gray_color: #a1a1a1;
+
+//navigation
+.header_country {
+  background-color: $black_color;
+  .user_icon {
+    color: $gray_color;
+  }
+}
+
+//index country
+.s-country {
+  background: url('/country/bg-country.png') no-repeat center center fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: calc(100vh - 82px);
+
+  .s-country__footer {
+    background: rgba(26, 26, 26, 0.65);
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.17);
+    backdrop-filter: blur(60px);
+    margin-top: 7rem;
+    border-radius: 20px;
+  }
+}
