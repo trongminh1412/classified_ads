@@ -12,7 +12,7 @@ export default function Home() {
         <div className="s-country__content pb-2">
           <Container>
             <Row>
-              <div className="s-country__content--title text-light text-center p-5">
+              <div className="s-country__content--title text-light text-center p-4">
                 <h1>Sell and buy near you</h1>
               </div>
 

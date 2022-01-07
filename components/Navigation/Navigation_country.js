@@ -93,7 +93,7 @@ const Navigation_country = () => {
           sticky ? ' sticky-top ' : ''
         }`}
       >
-        <div>
+        <div className="container">
           <Navbar light expand="lg">
             <Container className="d-flex justify-content-between align-content-center flex-wrap">
               <div className="col-auto pl-0 pr-3 d-flex d-none-pc-custom">
