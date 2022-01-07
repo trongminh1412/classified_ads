@@ -6,7 +6,7 @@ import * as Yup from 'yup';
 import Link from 'next/link';
 import Image from 'next/image';
 import { userService } from 'services';
-import { Layout } from 'components/account';
+import { Layout } from 'components/Account';
 import { AiOutlineEye } from 'react-icons/ai';
 import axios from 'axios';
 import {
