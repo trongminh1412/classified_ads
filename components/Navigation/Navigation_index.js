@@ -3,9 +3,10 @@ import { useRouter } from 'next/dist/client/router';
 import Link from 'next/link';
 import Image from 'next/image';
 import { userService } from 'services';
-import dynamic from 'next/dynamic';
-import { BiSearchAlt2 } from 'react-icons/bi';
 import { FaRegUserCircle } from 'react-icons/fa';
+import { AiOutlinePlus } from 'react-icons/ai';
+import Language_dropdown from 'components/Dropdown/Language';
+import { BiCategory } from 'react-icons/bi';
 import {
   Container,
   Col,
@@ -87,9 +88,6 @@ const Navigation_index = () => {
     }
   }
 
-  if (!user) {
-  }
-
   return (
     <>
       <div
@@ -99,7 +97,7 @@ const Navigation_index = () => {
       >
         <div className="container">
           <Navbar light expand="lg">
-            <Container className="d-flex justify-content-between align-content-center flex-wrap">
+            <Container className="d-flex align-items-center justify-content-between align-content-center flex-wrap">
               <div className="col-auto pl-0 pr-3 d-flex d-none-pc-custom">
                 <Image
                   src="/logo-ico.svg"
@@ -110,8 +108,18 @@ const Navigation_index = () => {
                 />
               </div>
 
-              <div className="input-group align-items-center input-search ">
-                <Link href="/country">country</Link>
+              <div className="input-group align-items-center language_dropdown">
+                <Language_dropdown />
+              </div>
+
+              <div className="btn btn-create">
+                <AiOutlinePlus />
+                Create listing
+              </div>
+
+              <div className="category">
+                <BiCategory />
+                Browse Listings
               </div>
               <div className="d-none d-lg-none ml-3 mr-0">
                 <div className="nav-search-box">
@@ -132,7 +140,7 @@ const Navigation_index = () => {
                         Hi {userService.userValue?.username}
                       </h6>
                       <h6>
-                        <a onClick={logout} href="#">
+                        <a onClick={logout} style={{ cursor: 'pointer' }}>
                           Log out
                         </a>
                       </h6>

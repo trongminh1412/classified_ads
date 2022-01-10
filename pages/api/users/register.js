@@ -1,6 +1,6 @@
-const bcrypt = require("bcryptjs");
+const bcrypt = require('bcryptjs');
 
-import { apiHandler, usersRepo } from "helpers/api";
+import { apiHandler, usersRepo } from 'helpers/api';
 
 export default apiHandler({
   post: register,
@@ -8,7 +8,7 @@ export default apiHandler({
 
 function register(req, res) {
   // split out password from user details
-  const { password, ...user } = req.body;
+  const { password, confirmPassword, ...user } = req.body;
 
   // validate
   if (usersRepo.find((x) => x.email === user.email))
@@ -16,6 +16,7 @@ function register(req, res) {
 
   // hash password
   user.hash = bcrypt.hashSync(password, 10);
+  user.hash = bcrypt.hashSync(confirmPassword, 10);
 
   usersRepo.create(user);
   return res.status(200).json({});

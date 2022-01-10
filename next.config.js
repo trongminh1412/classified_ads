@@ -7,8 +7,8 @@ module.exports = {
   publicRuntimeConfig: {
     apiUrl:
       process.env.NODE_ENV === 'development'
-        ? 'http://localhost:4000/api' // development api
-        : 'http://localhost:4000/api', // production api
+        ? 'https://classified-ads-tau.vercel.app/api' // development api
+        : 'https://classified-ads-tau.vercel.app/api', // production api
   },
   images: {
     domains: ['https:/img-7hit-com.s3.ap-northeast-2.amazonaws.com'],

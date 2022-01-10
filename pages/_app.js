@@ -3,7 +3,6 @@ import Head from 'next/head';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '/styles/home.scss';
 import '/styles/globals.scss';
-import '/styles/auth.scss';
 import '/styles/country.scss';
 import { SessionProvider } from 'next-auth/react';
 
