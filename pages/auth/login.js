@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 import { userService } from 'services';
-import { Layout } from 'components/account';
+import { Layout } from 'components/Account/Layout';
 import { AiOutlineEye } from 'react-icons/ai';
 import axios from 'axios';
 import {
