@@ -1,9 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Navigation from 'components/Navigation/Navigation_index';
+import Popular from 'components/carousel/popular';
 import Footer from 'components/Footers/footer';
 import { BiSearchAlt2 } from 'react-icons/bi';
 import { Container, Row, Col, Input, Button, Card, CardBody } from 'reactstrap';
+import popular from 'components/carousel/popular';
 export default function Home() {
   return (
     <>
@@ -69,9 +71,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="s-popular">
-        <div className="s-popular__content">
-          <Container>
+      <section className="s-main">
+        <div className="s-main__content">
+          <Container style={{ 'max-width': '1500px' }}>
             <Row>
               <Col md="2" className="d-none d-md-block text-center">
                 <div className="ads">
@@ -80,7 +82,7 @@ export default function Home() {
                       <Image
                         src="/home/event.png"
                         alt="7Hit Logo"
-                        width={100}
+                        width={200}
                         height={1500}
                         layout="intrinsic"
                         priority
@@ -90,497 +92,271 @@ export default function Home() {
                 </div>
               </Col>
               <Col md="8">
+                {/* popular */}
+                <section className="s-popular">
+                  <div className="s-popular__content">
+                    <Container>
+                      <div className="s-popular__content--title d-flex flex-wrap align-items-center">
+                        <h4>
+                          <span className="fw-bold">Popular</span> Listings
+                        </h4>
+                        <h6 className="border-bottom border-dark ms-auto">
+                          View more
+                        </h6>
+                      </div>
+                      <div className="s-popular__content__body">
+                        <Popular />
+                      </div>
+                    </Container>
+                  </div>
+                </section>
+
+                {/* category */}
                 <section className="s-category">
-                  <div className="s-category__content">
-                    <Container>
-                      <div className="d-flex justify-content-between align-content-start">
-                        {/* <Col> */}
-                        <div className="s-category__content--block">
-                          <Row>
-                            <Col
-                              lg="6"
-                              md="12"
-                              className="align-self-center text-md-center"
-                            >
-                              <div className="s-category__content--block--image">
-                                <Image
-                                  src="/home/s-category.png"
-                                  alt=""
-                                  layout="intrinsic"
-                                  width={75}
-                                  height={75}
-                                />
-                              </div>
-                            </Col>
-                            <Col
-                              lg="6"
-                              md="12"
-                              className="text-md-center text-lg-start align-self-center ps-lg-0"
-                            >
-                              <div className="s-category__content--block--title">
-                                <h5 className="title-first">Fashion</h5>
-                                <p>Shop $1</p>
-                              </div>
-                            </Col>
-                          </Row>
-                        </div>
-                        {/* </Col>
-              <Col> */}
-                        <div className="s-category__content--block">
-                          <Row>
-                            <Col
-                              lg="6"
-                              md="12"
-                              className="align-self-center text-md-center"
-                            >
-                              <div className="s-category__content--block--image">
-                                <Image
-                                  src="/home/s-category.png"
-                                  alt=""
-                                  layout="intrinsic"
-                                  width={75}
-                                  height={75}
-                                />
-                              </div>
-                            </Col>
-                            <Col
-                              lg="6"
-                              md="12"
-                              className="text-md-center text-lg-start align-self-center ps-lg-0"
-                            >
-                              <div className="s-category__content--block--title">
-                                <h5 className="title-second">Tech</h5>
-                                <p>Hot deals</p>
-                              </div>
-                            </Col>
-                          </Row>
-                        </div>
-                        {/* </Col>
-              <Col> */}
-                        <div className="s-category__content--block">
-                          <Row>
-                            <Col
-                              lg="6"
-                              md="12"
-                              className="align-self-center text-md-center"
-                            >
-                              <div className="s-category__content--block--image">
-                                <Image
-                                  src="/home/s-category.png"
-                                  alt=""
-                                  layout="intrinsic"
-                                  width={75}
-                                  height={75}
-                                />
-                              </div>
-                            </Col>
-                            <Col
-                              lg="6"
-                              md="12"
-                              className="text-md-center text-lg-start align-self-center ps-lg-0"
-                            >
-                              <div className="s-category__content--block--title">
-                                <h5 className="title-third">Beauty</h5>
-                                <p>Coupon</p>
-                              </div>
-                            </Col>
-                          </Row>
-                        </div>
-                        {/* </Col>
-              <Col> */}
-                        <div className="s-category__content--block">
-                          <Row>
-                            <Col
-                              lg="6"
-                              md="12"
-                              className="align-self-center text-md-center"
-                            >
-                              <div className="s-category__content--block--image">
-                                <Image
-                                  src="/home/s-category.png"
-                                  alt=""
-                                  layout="intrinsic"
-                                  width={75}
-                                  height={75}
-                                />
-                              </div>
-                            </Col>
-                            <Col
-                              lg="6"
-                              md="12"
-                              className="text-md-center text-lg-start align-self-center ps-lg-0"
-                            >
-                              <div className="s-category__content--block--title">
-                                <h5 className="title-fourth">Kids</h5>
-                                <p>buy 1 get 1</p>
-                              </div>
-                            </Col>
-                          </Row>
-                        </div>
-                        {/* </Col>
-              <Col> */}
-                        <div className="s-category__content--block">
-                          <Row>
-                            <Col
-                              lg="6"
-                              md="12"
-                              className="align-self-center text-md-center"
-                            >
-                              <div className="s-category__content--block--image">
-                                <Image
-                                  src="/home/s-category.png"
-                                  alt=""
-                                  layout="intrinsic"
-                                  width={75}
-                                  height={75}
-                                />
-                              </div>
-                            </Col>
-                            <Col
-                              lg="6"
-                              md="12"
-                              className="text-md-center text-lg-start align-self-center ps-lg-0"
-                            >
-                              <div className="s-category__content--block--title">
-                                <h5 className="title-fifth">Home</h5>
-                                <p>Shop $2</p>
-                              </div>
-                            </Col>
-                          </Row>
-                        </div>
-                        {/* </Col> */}
-                      </div>
-                    </Container>
-                  </div>
-                </section>
-
-                <section className="s-special">
-                  <div className="s-special__content">
-                    <Container>
-                      <div className="s-special__content--title d-flex flex-wrap align-items-center">
-                        <h3 className="fw-bold">Special deals</h3>
+                  <Container>
+                    <div className="s-category__content">
+                      <div className="s-category__content--title d-flex flex-wrap align-items-center">
+                        <h4>
+                          Browse by
+                          <span className="fw-bold"> Category</span>
+                        </h4>
                         <h6 className="border-bottom border-dark ms-auto">
-                          See All
+                          View more
                         </h6>
                       </div>
-                      <div className="s-special__content__body"></div>
-                    </Container>
-                  </div>
-                </section>
-
-                <section className="s-flash_sale">
-                  <div className="s-flash_sale__content">
-                    <Container>
-                      <div className="s-flash_sale__content--title d-flex flex-wrap align-items-center">
-                        <h3 className="fw-bold text-danger">Flash sale</h3>
-                        <h6 className="border-bottom border-dark ms-auto">
-                          See All
-                        </h6>
-                      </div>
-                      <div className="s-flash_sale__content__body"></div>
-                    </Container>
-                  </div>
-                </section>
-
-                <section className="s-collection_kids">
-                  <div className="s-collection_kids__content">
-                    <Container>
-                      <div className="s-collection_kids__content--title d-flex flex-wrap align-items-center">
-                        <div className="d-flex align-items-center">
-                          <h3 className="fw-bold pe-3">Kids</h3>
-                          <h6 className="collection_kids--text">
-                            <Link href="#">Collection</Link>
-                          </h6>
-                        </div>
-                        <h6 className="float-end border-bottom border-dark ms-auto">
-                          See All
-                        </h6>
-                      </div>
-                      <div className="s-collection_kids__content--card pt-3">
+                      <div className="s-category__content__body">
                         <Row>
-                          <Col lg="2" md="3" sm="4" xs="6 py-3">
-                            <Card>
-                              <Image
-                                src="/home/s-collection-kids.png"
-                                alt="collection kids"
-                                layout="intrinsic"
-                                width={200}
-                                height={150}
-                              />
-                              <CardBody>
-                                <h6 className="fs-14 fw-bold">
-                                  {' '}
-                                  Mitao Cat Second Ge...
-                                </h6>
-                                <div className="justify-content-between flex-wrap fs-12 pb-2 fw-bold">
-                                  <span>$15.00</span>
-                                  <span className="fee-float-right ps-2">
-                                    $11.00
-                                  </span>
-                                </div>
-
-                                <div></div>
-                              </CardBody>
-                            </Card>
+                          <Col xl="2" lg="3" md="4" sm="6">
+                            <div className="product">
+                              <div className="product_spin">
+                                <Image
+                                  src="/home/category/automobile.svg"
+                                  alt="7Hit Logo"
+                                  width={60}
+                                  height={60}
+                                  layout="intrinsic"
+                                  priority
+                                />
+                              </div>
+                              <h6>Automobiles</h6>
+                            </div>
                           </Col>
-                          <Col lg="2" md="3" sm="4" xs="6 py-3">
-                            <Card>
-                              <Image
-                                src="/home/s-collection-kids.png"
-                                alt="collection kids"
-                                layout="intrinsic"
-                                width={200}
-                                height={150}
-                              />
-                              <CardBody>
-                                <h6 className="fs-14 fw-bold">
-                                  {' '}
-                                  Mitao Cat Second Ge...
-                                </h6>
-                                <div className="justify-content-between flex-wrap fs-12 pb-2 fw-bold">
-                                  <span>$15.00</span>
-                                  <span className="fee-float-right ps-2">
-                                    $11.00
-                                  </span>
-                                </div>
-                                <div className="d-flex justify-content-between fs-12"></div>
-                                <div></div>
-                              </CardBody>
-                            </Card>
+                          <Col xl="2" lg="3" md="4" sm="6">
+                            <div className="product">
+                              <div className="product_spin">
+                                <Image
+                                  src="/home/category/mobile.svg"
+                                  alt="7Hit Logo"
+                                  width={60}
+                                  height={60}
+                                  layout="intrinsic"
+                                  priority
+                                />
+                              </div>
+                              <h6>Phones & Tablets</h6>
+                            </div>
                           </Col>
-                          <Col lg="2" md="3" sm="4" xs="6 py-3">
-                            <Card>
-                              <Image
-                                src="/home/s-collection-kids.png"
-                                alt="collection kids"
-                                layout="intrinsic"
-                                width={200}
-                                height={150}
-                              />
-                              <CardBody>
-                                <h6 className="fs-14 fw-bold">
-                                  {' '}
-                                  Mitao Cat Second Ge...
-                                </h6>
-                                <div className="justify-content-between flex-wrap fs-12 pb-2 fw-bold">
-                                  <span>$15.00</span>
-                                  <span className="fee-float-right ps-2">
-                                    $11.00
-                                  </span>
-                                </div>
-                                <div className="d-flex justify-content-between fs-12"></div>
-                                <div></div>
-                              </CardBody>
-                            </Card>
+                          <Col xl="2" lg="3" md="4" sm="6">
+                            <div className="product">
+                              <div className="product_spin">
+                                <Image
+                                  src="/home/category/electronics.svg"
+                                  alt="7Hit Logo"
+                                  width={60}
+                                  height={60}
+                                  layout="intrinsic"
+                                  priority
+                                />
+                              </div>
+                              <h6>Electronics</h6>
+                            </div>
                           </Col>
-                          <Col lg="2" md="3" sm="4" xs="6 py-3">
-                            <Card>
-                              <Image
-                                src="/home/s-collection-kids.png"
-                                alt="collection kids"
-                                layout="intrinsic"
-                                width={200}
-                                height={150}
-                              />
-                              <CardBody>
-                                <h6 className="fs-14 fw-bold">
-                                  {' '}
-                                  Mitao Cat Second Ge...
-                                </h6>
-                                <div className="justify-content-between flex-wrap fs-12 pb-2 fw-bold">
-                                  <span>$15.00</span>
-                                  <span className="fee-float-right ps-2">
-                                    $11.00
-                                  </span>
-                                </div>
-                                <div className="d-flex justify-content-between fs-12"></div>
-                                <div></div>
-                              </CardBody>
-                            </Card>
+                          <Col xl="2" lg="3" md="4" sm="6">
+                            <div className="product">
+                              <div className="product_spin">
+                                <Image
+                                  src="/home/category/furniture.svg"
+                                  alt="7Hit Logo"
+                                  width={60}
+                                  height={60}
+                                  layout="intrinsic"
+                                  priority
+                                />
+                              </div>
+                              <h6>Furniture & Appliances</h6>
+                            </div>
                           </Col>
-                          <Col lg="2" md="3" sm="4" xs="6 py-3">
-                            <Card>
-                              <Image
-                                src="/home/s-collection-kids.png"
-                                alt="collection kids"
-                                layout="intrinsic"
-                                width={200}
-                                height={150}
-                              />
-                              <CardBody>
-                                <h6 className="fs-14 fw-bold">
-                                  {' '}
-                                  Mitao Cat Second Ge...
-                                </h6>
-                                <div className="justify-content-between flex-wrap fs-12 pb-2 fw-bold">
-                                  <span>$15.00</span>
-                                  <span className="fee-float-right ps-2">
-                                    $11.00
-                                  </span>
-                                </div>
-                                <div className="d-flex justify-content-between fs-12"></div>
-                                <div></div>
-                              </CardBody>
-                            </Card>
+                          <Col xl="2" lg="3" md="4" sm="6">
+                            <div className="product">
+                              <div className="product_spin">
+                                <Image
+                                  src="/home/category/real.svg"
+                                  alt="7Hit Logo"
+                                  width={60}
+                                  height={60}
+                                  layout="intrinsic"
+                                  priority
+                                />
+                              </div>
+                              <h6>Real estate</h6>
+                            </div>
                           </Col>
-                          <Col lg="2" md="3" sm="4" xs="6 py-3">
-                            <Card>
-                              <Image
-                                src="/home/s-collection-kids.png"
-                                alt="collection kids"
-                                layout="intrinsic"
-                                width={200}
-                                height={150}
-                              />
-                              <CardBody>
-                                <h6 className="fs-14 fw-bold">
-                                  {' '}
-                                  Mitao Cat Second Ge...
-                                </h6>
-                                <div className="justify-content-between flex-wrap fs-12 pb-2 fw-bold">
-                                  <span>$15.00</span>
-                                  <span className="fee-float-right ps-2">
-                                    $11.00
-                                  </span>
-                                </div>
-                                <div className="d-flex justify-content-between fs-12"></div>
-                                <div></div>
-                              </CardBody>
-                            </Card>
+                          <Col xl="2" lg="3" md="4" sm="6">
+                            <div className="product">
+                              <div className="product_spin">
+                                <Image
+                                  src="/home/category/animals.svg"
+                                  alt="7Hit Logo"
+                                  width={60}
+                                  height={60}
+                                  layout="intrinsic"
+                                  priority
+                                />
+                              </div>
+                              <h6>Animals & Pets</h6>
+                            </div>
                           </Col>
-                          <Col lg="2" md="3" sm="4" xs="6 py-3">
-                            <Card>
-                              <Image
-                                src="/home/s-collection-kids.png"
-                                alt="collection kids"
-                                layout="intrinsic"
-                                width={200}
-                                height={150}
-                              />
-                              <CardBody>
-                                <h6 className="fs-14 fw-bold">
-                                  {' '}
-                                  Mitao Cat Second Ge...
-                                </h6>
-                                <div className="justify-content-between flex-wrap fs-12 pb-2 fw-bold">
-                                  <span>$15.00</span>
-                                  <span className="fee-float-right ps-2">
-                                    $11.00
-                                  </span>
-                                </div>
-                                <div className="d-flex justify-content-between fs-12"></div>
-                                <div></div>
-                              </CardBody>
-                            </Card>
+                          <Col xl="2" lg="3" md="4" sm="6">
+                            <div className="product">
+                              <div className="product_spin">
+                                <Image
+                                  src="/home/category/fashion.svg"
+                                  alt="7Hit Logo"
+                                  width={60}
+                                  height={60}
+                                  layout="intrinsic"
+                                  priority
+                                />
+                              </div>
+                              <h6>Fashion</h6>
+                            </div>
                           </Col>
-                          <Col lg="2" md="3" sm="4" xs="6 py-3">
-                            <Card>
-                              <Image
-                                src="/home/s-collection-kids.png"
-                                alt="collection kids"
-                                layout="intrinsic"
-                                width={200}
-                                height={150}
-                              />
-                              <CardBody>
-                                <h6 className="fs-14 fw-bold">
-                                  {' '}
-                                  Mitao Cat Second Ge...
-                                </h6>
-                                <div className="justify-content-between flex-wrap fs-12 pb-2 fw-bold">
-                                  <span>$15.00</span>
-                                  <span className="fee-float-right ps-2">
-                                    $11.00
-                                  </span>
-                                </div>
-                                <div className="d-flex justify-content-between fs-12"></div>
-                                <div></div>
-                              </CardBody>
-                            </Card>
+                          <Col xl="2" lg="3" md="4" sm="6">
+                            <div className="product">
+                              <div className="product_spin">
+                                <Image
+                                  src="/home/category/beauty.svg"
+                                  alt="7Hit Logo"
+                                  width={60}
+                                  height={60}
+                                  layout="intrinsic"
+                                  priority
+                                />
+                              </div>
+                              <h6>Beauty & Well being</h6>
+                            </div>
                           </Col>
-                          <Col lg="2" md="3" sm="4" xs="6 py-3">
-                            <Card>
-                              <Image
-                                src="/home/s-collection-kids.png"
-                                alt="collection kids"
-                                layout="intrinsic"
-                                width={200}
-                                height={150}
-                              />
-                              <CardBody>
-                                <h6 className="fs-14 fw-bold">
-                                  {' '}
-                                  Mitao Cat Second Ge...
-                                </h6>
-                                <div className="justify-content-between flex-wrap fs-12 pb-2 fw-bold">
-                                  <span>$15.00</span>
-                                  <span className="fee-float-right ps-2">
-                                    $11.00
-                                  </span>
-                                </div>
-                                <div className="d-flex justify-content-between fs-12"></div>
-                                <div></div>
-                              </CardBody>
-                            </Card>
+                          <Col xl="2" lg="3" md="4" sm="6">
+                            <div className="product">
+                              <div className="product_spin">
+                                <Image
+                                  src="/home/category/job.svg"
+                                  alt="7Hit Logo"
+                                  width={60}
+                                  height={60}
+                                  layout="intrinsic"
+                                  priority
+                                />
+                              </div>
+                              <h6>Jobs</h6>
+                            </div>
+                          </Col>
+                          <Col xl="2" lg="3" md="4" sm="6">
+                            <div className="product">
+                              <div className="product_spin">
+                                <Image
+                                  src="/home/category/services.svg"
+                                  alt="7Hit Logo"
+                                  width={60}
+                                  height={60}
+                                  layout="intrinsic"
+                                  priority
+                                />
+                              </div>
+                              <h6>Services</h6>
+                            </div>
+                          </Col>
+                          <Col xl="2" lg="3" md="4" sm="6">
+                            <div className="product">
+                              <div className="product_spin">
+                                <Image
+                                  src="/home/category/real.svg"
+                                  alt="7Hit Logo"
+                                  width={60}
+                                  height={60}
+                                  layout="intrinsic"
+                                  priority
+                                />
+                              </div>
+                              <h6>Learning</h6>
+                            </div>
+                          </Col>
+                          <Col xl="2" lg="3" md="4" sm="6">
+                            <div className="product">
+                              <div className="product_spin">
+                                <Image
+                                  src="/home/category/event.svg"
+                                  alt="7Hit Logo"
+                                  width={60}
+                                  height={60}
+                                  layout="intrinsic"
+                                  priority
+                                />
+                              </div>
+                              <h6>Local Events</h6>
+                            </div>
                           </Col>
                         </Row>
                       </div>
-                    </Container>
-                  </div>
+                    </div>
+                  </Container>
                 </section>
 
-                <section className="s-collection">
-                  <div className="s-collection__content">
+                {/* Latest */}
+                <section className="s-latest">
+                  <div className="s-latest__content">
                     <Container>
-                      <div className="s-collection__content--title d-flex flex-wrap align-items-center">
-                        <h3 className="fw-bold text-danger">Collections</h3>
+                      <div className="s-latest__content--title d-flex flex-wrap align-items-center">
+                        <h4>
+                          <span className="fw-bold">Latest</span> Listings
+                        </h4>
                         <h6 className="border-bottom border-dark ms-auto">
-                          All Collections
+                          View more
                         </h6>
                       </div>
-                      <div className="s-collection__content__body"></div>
-                    </Container>
-                  </div>
-                </section>
-
-                <section className="s-banner_price">
-                  <div className="s-banner_price__content">
-                    <Container>
-                      <Row>
-                        <Col lg="4" md="6">
-                          <div className="s-banner_price__content--banner">
+                      <div className="s-latest__content__body">
+                        <div className="card__item">
+                          <Card>
                             <Image
-                              src="/home/banner_price.png"
-                              alt="banner price"
-                              width={413}
-                              height={167}
-                              layout="responsive"
+                              src="/home/popular/1.svg"
+                              alt="collection kids"
+                              layout="intrinsic"
+                              width={188}
+                              height={154}
                             />
-                          </div>
-                        </Col>
-                        <Col lg="4" md="6">
-                          <div className="s-banner_price__content--banner">
-                            <Image
-                              src="/home/banner_price.png"
-                              alt="banner price"
-                              width={413}
-                              height={167}
-                              layout="responsive"
-                            />
-                          </div>
-                        </Col>
-                        <Col lg="4" md="6">
-                          <div className="s-banner_price__content--banner">
-                            <Image
-                              src="/home/banner_price.png"
-                              alt="banner price"
-                              width={413}
-                              height={167}
-                              layout="responsive"
-                            />
-                          </div>
-                        </Col>
-                      </Row>
+                            <div className="card__item--sub-img">
+                              <Link href="/">
+                                <a>
+                                  <Image
+                                    src="/home/popular/sub_img.svg"
+                                    alt="collection kids"
+                                    layout="intrinsic"
+                                    width={12}
+                                    height={12}
+                                  />
+                                </a>
+                              </Link>
+                              <span className="ps-1">5</span>
+                            </div>
+                            <CardBody className="text-center">
+                              <h6 className="fs-14 fw-bold"> Parrot Anafi</h6>
+                              <h6 className="fs-14 fw-bold text-warning">
+                                $18
+                              </h6>
+                            </CardBody>
+                          </Card>
+                        </div>
+                      </div>
                     </Container>
                   </div>
                 </section>
@@ -592,7 +368,7 @@ export default function Home() {
                       <Image
                         src="/home/event.png"
                         alt="7Hit Logo"
-                        width={100}
+                        width={200}
                         height={1500}
                         layout="intrinsic"
                         priority
