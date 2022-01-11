@@ -76,7 +76,7 @@ export default function OTP() {
                         </div>
                       </FormGroup>
                       <FormGroup className="pt-5">
-                        <Button type="submit" block>
+                        <Button className="submit" type="submit" block>
                           <Link href="/auth/reset_password">Continue</Link>
                         </Button>
                       </FormGroup>

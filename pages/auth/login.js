@@ -158,7 +158,11 @@ export default function Login() {
                           </Col>
                         </Row>
                         <FormGroup className="pt-5">
-                          <Button disabled={formState.isSubmitting} block>
+                          <Button
+                            className="submit"
+                            disabled={formState.isSubmitting}
+                            block
+                          >
                             {formState.isSubmitting && (
                               <span className="spinner-border spinner-border-sm mr-1"></span>
                             )}

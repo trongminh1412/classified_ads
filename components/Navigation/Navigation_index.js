@@ -113,13 +113,11 @@ const Navigation_index = () => {
               </div>
 
               <div className="btn btn-create">
-                <AiOutlinePlus />
-                Create listing
+                <AiOutlinePlus /> Create listing
               </div>
 
               <div className="category">
-                <BiCategory />
-                Browse Listings
+                <BiCategory /> Browse Listings
               </div>
               <div className="d-none d-lg-none ml-3 mr-0">
                 <div className="nav-search-box">

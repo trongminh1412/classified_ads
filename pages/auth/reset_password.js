@@ -120,7 +120,7 @@ export default function Reset_password() {
                         </div>
                       </FormGroup>
                       <FormGroup className="pt-5">
-                        <Button type="submit" block>
+                        <Button className="submit" type="submit" block>
                           Save update
                         </Button>
                       </FormGroup>

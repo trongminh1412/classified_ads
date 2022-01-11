@@ -77,7 +77,7 @@ export default function Forgot_password() {
                         </div>
                       </FormGroup>
                       <FormGroup className="pt-5">
-                        <Button type="submit" block>
+                        <Button className="submit" type="submit" block>
                           Submit
                         </Button>
                       </FormGroup>

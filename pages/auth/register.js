@@ -113,18 +113,33 @@ export default function Register() {
                         </FormGroup>
                         <FormGroup>
                           <Label for="Phone">Phone</Label>
-                          <input
-                            id="phone"
-                            name="phone"
-                            placeholder="Phone number"
-                            type="text"
-                            {...register('phone', { required: true })}
-                            className={`form-control  ${
-                              errors.phone ? 'is-invalid' : ''
-                            }`}
-                          />
-                          <div className="invalid-feedback">
-                            {errors.phone?.message}
+                          <div className="input-group align-items-center input_search justify-content-center">
+                            <Button type="submit" className="change_language">
+                              <Link href="/country">
+                                <a>
+                                  <Image
+                                    src="/country/US.png"
+                                    alt="banner"
+                                    layout="intrinsic"
+                                    width={20}
+                                    height={14}
+                                  />
+                                </a>
+                              </Link>
+                            </Button>
+                            <input
+                              id="phone"
+                              name="phone"
+                              placeholder="Phone number"
+                              type="text"
+                              {...register('phone', { required: true })}
+                              className={`form-control  ${
+                                errors.phone ? 'is-invalid' : ''
+                              }`}
+                            />
+                            <div className="invalid-feedback">
+                              {errors.phone?.message}
+                            </div>
                           </div>
                         </FormGroup>
                         <FormGroup>
@@ -221,6 +236,7 @@ export default function Register() {
                         </FormGroup>
                         <FormGroup className="pt-5">
                           <Button
+                            className="submit"
                             type="submit"
                             block
                             disabled={formState.isSubmitting}
