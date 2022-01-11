@@ -6,6 +6,7 @@ $gray3-color: #ced4da;
 $blue-color: #005cc8;
 $blue2-color: #2d9cdb;
 $green-color: #219653;
+$green2-color: #27ae60;
 
 $red-color: #e43226;
 $red2-color: #b02418;
@@ -325,17 +326,17 @@ $radius-collect: 25px;
         img {
           border-radius: $radius $radius 0 0;
         }
-      }
 
-      .card__item--sub-img {
-        position: absolute;
-        right: 5%;
-        top: 5%;
-        padding: 0 4px;
-        background: #0c1a30;
-        color: $gray2-color;
-        border-radius: 4px;
-        opacity: 0.4;
+        .card__item--sub-img {
+          position: absolute;
+          right: 5%;
+          top: 5%;
+          padding: 0 4px;
+          background: #0c1a30;
+          color: $gray2-color;
+          border-radius: 4px;
+          opacity: 0.4;
+        }
       }
     }
 
@@ -348,12 +349,13 @@ $radius-collect: 25px;
     padding: 2rem 0;
 
     .s-category__content {
-      padding: 2rem;
+      padding: 1rem;
       background: white;
       box-shadow: 0px 2px 6px $bg-shadow;
       border-radius: $radius;
 
       .s-category__content__body {
+        padding-top: 1.5rem;
         .product {
           text-align: -webkit-center;
 
@@ -375,6 +377,61 @@ $radius-collect: 25px;
             padding-top: 2rem;
           }
         }
+      }
+    }
+  }
+
+  //latest
+  .s-latest {
+    .s-latest__content__body {
+      .card__item {
+        .card {
+          box-shadow: 0px 2px 6px $bg-shadow;
+          border-radius: $radius;
+          border: 0;
+
+          img {
+            border-radius: $radius $radius 0 0;
+          }
+          .card__item--sub-img {
+            position: absolute;
+            right: 5%;
+            top: 3%;
+            padding: 0 4px;
+            background: #0c1a30;
+            color: $gray2-color;
+            border-radius: 4px;
+            opacity: 0.4;
+          }
+          .card-body {
+            .text_price {
+              color: $green2-color;
+
+              .bookmark {
+                border: 1px solid #828282;
+                box-sizing: border-box;
+                border-radius: 4px;
+                padding: 0 3px;
+                opacity: 0.4;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .s-latest__footer {
+      padding-top: 2rem;
+      justify-content: center;
+      text-align: center;
+
+      a.btn_load {
+        background: $bg-gray-color;
+        border-radius: 10px;
+        border: 1px solid transparent;
+        color: $red-color;
+        font-size: 16px;
+        font-weight: 700;
       }
     }
   }

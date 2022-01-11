@@ -51,7 +51,7 @@ function popular(props) {
             <Image
               src="/home/popular/1.svg"
               alt="collection kids"
-              layout="intrinsic"
+              layout="responsive"
               width={154}
               height={154}
             />
@@ -80,7 +80,7 @@ function popular(props) {
             <Image
               src="/home/popular/2.svg"
               alt="collection kids"
-              layout="intrinsic"
+              layout="responsive"
               width={154}
               height={154}
             />
@@ -109,7 +109,7 @@ function popular(props) {
             <Image
               src="/home/popular/1.svg"
               alt="collection kids"
-              layout="intrinsic"
+              layout="responsive"
               width={154}
               height={154}
             />
@@ -138,7 +138,7 @@ function popular(props) {
             <Image
               src="/home/popular/2.svg"
               alt="collection kids"
-              layout="intrinsic"
+              layout="responsive"
               width={154}
               height={154}
             />
@@ -167,7 +167,7 @@ function popular(props) {
             <Image
               src="/home/popular/1.svg"
               alt="collection kids"
-              layout="intrinsic"
+              layout="responsive"
               width={154}
               height={154}
             />
@@ -196,7 +196,7 @@ function popular(props) {
             <Image
               src="/home/popular/2.svg"
               alt="collection kids"
-              layout="intrinsic"
+              layout="responsive"
               width={154}
               height={154}
             />
@@ -225,7 +225,7 @@ function popular(props) {
             <Image
               src="/home/popular/1.svg"
               alt="collection kids"
-              layout="intrinsic"
+              layout="responsive"
               width={154}
               height={154}
             />
@@ -254,7 +254,7 @@ function popular(props) {
             <Image
               src="/home/popular/2.svg"
               alt="collection kids"
-              layout="intrinsic"
+              layout="responsive"
               width={154}
               height={154}
             />

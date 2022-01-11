@@ -3,9 +3,9 @@ import Link from 'next/link';
 import Navigation from 'components/Navigation/Navigation_index';
 import Popular from 'components/carousel/popular';
 import Footer from 'components/Footers/footer';
+import Latest from 'components/Home_product/Latest';
 import { BiSearchAlt2 } from 'react-icons/bi';
 import { Container, Row, Col, Input, Button, Card, CardBody } from 'reactstrap';
-import popular from 'components/carousel/popular';
 export default function Home() {
   return (
     <>
@@ -75,8 +75,8 @@ export default function Home() {
         <div className="s-main__content">
           <Container style={{ 'max-width': '1500px' }}>
             <Row>
-              <Col md="2" className="d-none d-md-block text-center">
-                <div className="ads">
+              <Col md="2" className="d-none d-md-block">
+                <div className="ads pt-5">
                   <Link href="/">
                     <a>
                       <Image
@@ -84,7 +84,7 @@ export default function Home() {
                         alt="7Hit Logo"
                         width={200}
                         height={1500}
-                        layout="intrinsic"
+                        layout="responsive"
                         priority
                       />
                     </a>
@@ -312,7 +312,7 @@ export default function Home() {
                   </Container>
                 </section>
 
-                {/* Latest */}
+                {/* latest */}
                 <section className="s-latest">
                   <div className="s-latest__content">
                     <Container>
@@ -325,44 +325,48 @@ export default function Home() {
                         </h6>
                       </div>
                       <div className="s-latest__content__body">
-                        <div className="card__item">
-                          <Card>
-                            <Image
-                              src="/home/popular/1.svg"
-                              alt="collection kids"
-                              layout="intrinsic"
-                              width={188}
-                              height={154}
-                            />
-                            <div className="card__item--sub-img">
-                              <Link href="/">
-                                <a>
-                                  <Image
-                                    src="/home/popular/sub_img.svg"
-                                    alt="collection kids"
-                                    layout="intrinsic"
-                                    width={12}
-                                    height={12}
-                                  />
-                                </a>
-                              </Link>
-                              <span className="ps-1">5</span>
-                            </div>
-                            <CardBody className="text-center">
-                              <h6 className="fs-14 fw-bold"> Parrot Anafi</h6>
-                              <h6 className="fs-14 fw-bold text-warning">
-                                $18
-                              </h6>
-                            </CardBody>
-                          </Card>
-                        </div>
+                        <Row className="row-cols-xl-5 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1">
+                          <Col className="py-2">
+                            <Latest />
+                          </Col>
+                          <Col className="py-2">
+                            <Latest />
+                          </Col>
+                          <Col className="py-2">
+                            <Latest />
+                          </Col>
+                          <Col className="py-2">
+                            <Latest />
+                          </Col>
+                          <Col className="py-2">
+                            <Latest />
+                          </Col>
+                          <Col className="py-2">
+                            <Latest />
+                          </Col>
+                          <Col className="py-2">
+                            <Latest />
+                          </Col>
+                          <Col className="py-2">
+                            <Latest />
+                          </Col>
+                          <Col className="py-2">
+                            <Latest />
+                          </Col>
+                          <Col className="py-2">
+                            <Latest />
+                          </Col>
+                        </Row>
                       </div>
                     </Container>
+                  </div>
+                  <div className="s-latest__footer">
+                    <a className="btn btn_load "> Load more</a>
                   </div>
                 </section>
               </Col>
               <Col md="2" className="d-none d-md-block">
-                <div className="ads">
+                <div className="ads pt-5">
                   <Link href="/">
                     <a>
                       <Image
@@ -370,13 +374,29 @@ export default function Home() {
                         alt="7Hit Logo"
                         width={200}
                         height={1500}
-                        layout="intrinsic"
+                        layout="responsive"
                         priority
                       />
                     </a>
                   </Link>
                 </div>
               </Col>
+            </Row>
+            <Row className="pt-5">
+              <div className="ads">
+                <Link href="/">
+                  <a>
+                    <Image
+                      src="/home/event-bottom.png"
+                      alt="7Hit Logo"
+                      width={1500}
+                      height={200}
+                      layout="responsive"
+                      priority
+                    />
+                  </a>
+                </Link>
+              </div>
             </Row>
           </Container>
         </div>
