@@ -126,7 +126,7 @@ export default function Home() {
                       </div>
                       <div className="s-category__content__body">
                         <Row>
-                          <Col xl="2" lg="3" md="4" sm="6">
+                          <Col xl="2" lg="3" md="4" sm="6" className="pt-4">
                             <div className="product">
                               <div className="product_spin">
                                 <Image
@@ -141,7 +141,7 @@ export default function Home() {
                               <h6>Automobiles</h6>
                             </div>
                           </Col>
-                          <Col xl="2" lg="3" md="4" sm="6">
+                          <Col xl="2" lg="3" md="4" sm="6" className="pt-4">
                             <div className="product">
                               <div className="product_spin">
                                 <Image
@@ -156,7 +156,7 @@ export default function Home() {
                               <h6>Phones & Tablets</h6>
                             </div>
                           </Col>
-                          <Col xl="2" lg="3" md="4" sm="6">
+                          <Col xl="2" lg="3" md="4" sm="6" className="pt-4">
                             <div className="product">
                               <div className="product_spin">
                                 <Image
@@ -171,7 +171,7 @@ export default function Home() {
                               <h6>Electronics</h6>
                             </div>
                           </Col>
-                          <Col xl="2" lg="3" md="4" sm="6">
+                          <Col xl="2" lg="3" md="4" sm="6" className="pt-4">
                             <div className="product">
                               <div className="product_spin">
                                 <Image
@@ -186,7 +186,7 @@ export default function Home() {
                               <h6>Furniture & Appliances</h6>
                             </div>
                           </Col>
-                          <Col xl="2" lg="3" md="4" sm="6">
+                          <Col xl="2" lg="3" md="4" sm="6" className="pt-4">
                             <div className="product">
                               <div className="product_spin">
                                 <Image
@@ -201,7 +201,7 @@ export default function Home() {
                               <h6>Real estate</h6>
                             </div>
                           </Col>
-                          <Col xl="2" lg="3" md="4" sm="6">
+                          <Col xl="2" lg="3" md="4" sm="6" className="pt-4">
                             <div className="product">
                               <div className="product_spin">
                                 <Image
@@ -216,7 +216,7 @@ export default function Home() {
                               <h6>Animals & Pets</h6>
                             </div>
                           </Col>
-                          <Col xl="2" lg="3" md="4" sm="6">
+                          <Col xl="2" lg="3" md="4" sm="6" className="pt-4">
                             <div className="product">
                               <div className="product_spin">
                                 <Image
@@ -231,7 +231,7 @@ export default function Home() {
                               <h6>Fashion</h6>
                             </div>
                           </Col>
-                          <Col xl="2" lg="3" md="4" sm="6">
+                          <Col xl="2" lg="3" md="4" sm="6" className="pt-4">
                             <div className="product">
                               <div className="product_spin">
                                 <Image
@@ -246,7 +246,7 @@ export default function Home() {
                               <h6>Beauty & Well being</h6>
                             </div>
                           </Col>
-                          <Col xl="2" lg="3" md="4" sm="6">
+                          <Col xl="2" lg="3" md="4" sm="6" className="pt-4">
                             <div className="product">
                               <div className="product_spin">
                                 <Image
@@ -261,7 +261,7 @@ export default function Home() {
                               <h6>Jobs</h6>
                             </div>
                           </Col>
-                          <Col xl="2" lg="3" md="4" sm="6">
+                          <Col xl="2" lg="3" md="4" sm="6" className="pt-4">
                             <div className="product">
                               <div className="product_spin">
                                 <Image
@@ -276,7 +276,7 @@ export default function Home() {
                               <h6>Services</h6>
                             </div>
                           </Col>
-                          <Col xl="2" lg="3" md="4" sm="6">
+                          <Col xl="2" lg="3" md="4" sm="6" className="pt-4">
                             <div className="product">
                               <div className="product_spin">
                                 <Image
@@ -291,7 +291,7 @@ export default function Home() {
                               <h6>Learning</h6>
                             </div>
                           </Col>
-                          <Col xl="2" lg="3" md="4" sm="6">
+                          <Col xl="2" lg="3" md="4" sm="6" className="pt-4">
                             <div className="product">
                               <div className="product_spin">
                                 <Image

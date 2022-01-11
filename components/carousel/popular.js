@@ -4,11 +4,39 @@ import Link from 'next/link';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { IconContext } from 'react-icons';
-import { AiOutlineStar } from 'react-icons/ai';
-import { BsThreeDotsVertical } from 'react-icons/bs';
 import { Card, CardBody } from 'reactstrap';
 
+function NextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div className={className} onClick={onClick}>
+      <Image
+        src="/home/nextArrow.svg"
+        alt="next"
+        layout="fixed"
+        width={60}
+        height={60}
+        priority
+      />
+    </div>
+  );
+}
+
+function PrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div className={className} onClick={onClick}>
+      <Image
+        src="/home/prevArrow.svg"
+        alt="prev"
+        layout="fixed"
+        width={60}
+        height={60}
+        priority
+      />
+    </div>
+  );
+}
 function popular(props) {
   const settings = {
     dots: false,
@@ -16,6 +44,8 @@ function popular(props) {
     speed: 500,
     slidesToShow: 6,
     slidesToScroll: 1,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     responsive: [
       {
         breakpoint: 1199,

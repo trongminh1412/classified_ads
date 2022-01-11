@@ -311,36 +311,55 @@ $radius-collect: 25px;
 
 //section main
 .s-main {
-  padding: 4rem 0;
+  padding: 4rem 0 0.8rem 0;
 
   //popular
   .s-popular {
-    .card__item {
-      padding: 0.5rem;
+    .s-popular__content__body {
+      .slick-prev {
+        left: -5px;
+        top: 30%;
+        z-index: 1;
 
-      .card {
-        box-shadow: 0px 2px 6px $bg-shadow;
-        border-radius: $radius;
-        border: 0;
-
-        img {
-          border-radius: $radius $radius 0 0;
-        }
-
-        .card__item--sub-img {
-          position: absolute;
-          right: 5%;
-          top: 5%;
-          padding: 0 4px;
-          background: #0c1a30;
-          color: $gray2-color;
-          border-radius: 4px;
-          opacity: 0.4;
+        &::before {
+          display: none;
         }
       }
-    }
 
-    .ads {
+      .slick-next {
+        right: 35px;
+        top: 30%;
+        z-index: 1;
+
+        &::before {
+          display: none;
+        }
+      }
+
+      .card__item {
+        padding: 5px;
+
+        .card {
+          box-shadow: 0px 2px 6px $bg-shadow;
+          border-radius: $radius;
+          border: 0;
+
+          img {
+            border-radius: $radius $radius 0 0;
+          }
+
+          .card__item--sub-img {
+            position: absolute;
+            right: 5%;
+            top: 5%;
+            padding: 0 4px;
+            background: #0c1a30;
+            color: $gray2-color;
+            border-radius: 4px;
+            opacity: 0.4;
+          }
+        }
+      }
     }
   }
 
@@ -355,7 +374,6 @@ $radius-collect: 25px;
       border-radius: $radius;
 
       .s-category__content__body {
-        padding-top: 1.5rem;
         .product {
           text-align: -webkit-center;
 
@@ -374,7 +392,7 @@ $radius-collect: 25px;
           h6 {
             font-size: 14px;
             font-weight: 600;
-            padding-top: 2rem;
+            padding-top: 1rem;
           }
         }
       }
@@ -405,7 +423,9 @@ $radius-collect: 25px;
           }
           .card-body {
             .text_price {
-              color: $green2-color;
+              h6 {
+                color: $green2-color;
+              }
 
               .bookmark {
                 border: 1px solid #828282;
