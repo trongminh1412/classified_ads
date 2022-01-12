@@ -35,6 +35,6 @@ deploy to dev:
     - eval $(ssh-agent -s)
   script:
     - chmod og= $SSH_PRIVATE_KEY
-    - ssh -o StrictHostKeyChecking=no -i $SSH_PRIVATE_KEY ubuntu@$DEV_SRV -p 60022 "docker login -u $CI_REGISTRY_USER -p $CI_JOB_TOKEN $CI_REGISTRY && docker rm -f olacity && docker run -itd --name olacity -p 3003:3000 $CI_REGISTRY_IMAGE:$ENVIRONMENT-$CI_COMMIT_SHORT_SHA"
+    - ssh -o StrictHostKeyChecking=no -i $SSH_PRIVATE_KEY ubuntu@$DEV_SRV -p 60022 "docker login -u $CI_REGISTRY_USER -p $CI_JOB_TOKEN $CI_REGISTRY && docker rm -f $CI_PROJECT_NAME && docker run -itd --name $CI_PROJECT_NAME -p 3003:3000 $CI_REGISTRY_IMAGE:$ENVIRONMENT-$CI_COMMIT_SHORT_SHA"
   only:
     - develop
