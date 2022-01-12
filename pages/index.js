@@ -74,7 +74,9 @@ export default function Home() {
       <section className="s-main">
         <div className="s-main__content">
           <Container style={{ 'max-width': '1500px' }}>
+            {/* content */}
             <Row>
+              {/* ads left */}
               <Col md="2" className="d-none d-md-block">
                 <div className="ads pt-5">
                   <Link href="/">
@@ -91,6 +93,8 @@ export default function Home() {
                   </Link>
                 </div>
               </Col>
+
+              {/* content */}
               <Col md="8">
                 {/* popular */}
                 <section className="s-popular">
@@ -365,6 +369,8 @@ export default function Home() {
                   </div>
                 </section>
               </Col>
+
+              {/* ads right */}
               <Col md="2" className="d-none d-md-block">
                 <div className="ads pt-5">
                   <Link href="/">
@@ -382,6 +388,8 @@ export default function Home() {
                 </div>
               </Col>
             </Row>
+
+            {/* ads footer */}
             <Row className="pt-5">
               <div className="ads">
                 <Link href="/">

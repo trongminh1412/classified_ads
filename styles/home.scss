@@ -52,114 +52,115 @@ $radius-collect: 25px;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
+
+  .col_block--auth {
+    h1 {
+      font-weight: bold;
+      font-size: 30px;
+    }
+
+    h6 {
+      color: $gray-color;
+    }
+
+    .col_block--card {
+      border-radius: 6px;
+    }
+
+    .dropdown-toggle {
+      cursor: pointer;
+      &::after {
+        font-size: 0;
+      }
+    }
+
+    Form {
+      .form-default--text {
+        text-align: right;
+      }
+
+      .form-control {
+        &.is-invalid {
+          background-image: none;
+        }
+
+        &:focus {
+          box-shadow: none;
+          border-color: $gray-color;
+        }
+
+        &:focus-visible {
+          outline: none;
+          border: 1px solid $gray-color !important;
+        }
+      }
+
+      button.change_language {
+        background: $gray2-color;
+        border: 1px solid #ced4da;
+        border-top-left-radius: $radius;
+        border-bottom-left-radius: $radius;
+      }
+
+      .text-regist {
+        font-size: 12px;
+      }
+
+      i.icon-hidden {
+        position: absolute;
+        top: 38px;
+        right: 3%;
+
+        svg {
+          width: 19px;
+        }
+      }
+
+      input,
+      button.submit {
+        border-radius: 10px;
+      }
+
+      .input-group input {
+        border-top-right-radius: $radius !important;
+        border-bottom-right-radius: $radius !important;
+      }
+
+      .otp input[type='text'] {
+        width: 21% !important;
+        height: 40px !important;
+        border: 1px solid $gray-color;
+        text-align: center;
+        margin-right: 20px;
+
+        &:last-child {
+          margin-right: 0 !important;
+        }
+
+        &:focus-visible {
+          outline: $gray-color;
+        }
+      }
+
+      button.submit {
+        background-color: $while-color;
+        border-color: $while-color;
+
+        &:hover {
+          background-color: $red-color;
+          border-color: $red-color;
+        }
+
+        &:focus {
+          background-color: $red-color;
+          border-color: $red-color;
+          box-shadow: none;
+        }
+      }
+    }
+  }
 }
 
-.col_block--auth {
-  h1 {
-    font-weight: bold;
-    font-size: 30px;
-  }
-
-  h6 {
-    color: $gray-color;
-  }
-
-  .col_block--card {
-    border-radius: 6px;
-  }
-
-  .dropdown-toggle {
-    cursor: pointer;
-    &::after {
-      font-size: 0;
-    }
-  }
-
-  Form {
-    .form-default--text {
-      text-align: right;
-    }
-
-    .form-control {
-      &.is-invalid {
-        background-image: none;
-      }
-
-      &:focus {
-        box-shadow: none;
-        border-color: $gray-color;
-      }
-
-      &:focus-visible {
-        outline: none;
-        border: 1px solid $gray-color !important;
-      }
-    }
-
-    button.change_language {
-      background: $gray2-color;
-      border: 1px solid #ced4da;
-      border-top-left-radius: $radius;
-      border-bottom-left-radius: $radius;
-    }
-
-    .text-regist {
-      font-size: 12px;
-    }
-
-    i.icon-hidden {
-      position: absolute;
-      top: 38px;
-      right: 3%;
-
-      svg {
-        width: 19px;
-      }
-    }
-
-    input,
-    button.submit {
-      border-radius: 10px;
-    }
-
-    .input-group input {
-      border-top-right-radius: $radius !important;
-      border-bottom-right-radius: $radius !important;
-    }
-
-    .otp input[type='text'] {
-      width: 21% !important;
-      height: 40px !important;
-      border: 1px solid $gray-color;
-      text-align: center;
-      margin-right: 20px;
-
-      &:last-child {
-        margin-right: 0 !important;
-      }
-
-      &:focus-visible {
-        outline: $gray-color;
-      }
-    }
-
-    button.submit {
-      background-color: $while-color;
-      border-color: $while-color;
-
-      &:hover {
-        background-color: $red-color;
-        border-color: $red-color;
-      }
-
-      &:focus {
-        background-color: $red-color;
-        border-color: $red-color;
-        box-shadow: none;
-      }
-    }
-  }
-}
 .svg-inline--fa {
   display: inline-block;
   font-size: inherit;
