@@ -1,0 +1,40 @@
+stages:
+  - build
+  - deploy
+image: docker:19.03.13
+
+variables:
+  DOCKER_TLS_CERTDIR: "/certs"
+
+services:
+  - docker:19.03.13-dind
+
+.build:
+  stage: build
+  before_script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_JOB_TOKEN $CI_REGISTRY
+  script:
+    - docker pull $CI_REGISTRY_IMAGE:$ENVIRONMENT-$CI_REGISTRY || true
+    - cat $ENV_DEV >> .env
+    - docker build -t $CI_REGISTRY_IMAGE:$ENVIRONMENT-$CI_COMMIT_SHORT_SHA .
+    - docker push $CI_REGISTRY_IMAGE:$ENVIRONMENT-$CI_COMMIT_SHORT_SHA
+build-dev:
+  variables:
+    ENVIRONMENT: dev
+  extends: .build
+  only:
+      - develop
+
+deploy to dev:
+  stage: deploy
+  image: alpine
+  variables:
+    ENVIRONMENT: dev
+  before_script:
+    - 'command -v ssh-agent >/dev/null || ( apk update && apk add openssh-client)'
+    - eval $(ssh-agent -s)
+  script:
+    - chmod og= $SSH_PRIVATE_KEY
+    - ssh -o StrictHostKeyChecking=no -i $SSH_PRIVATE_KEY ubuntu@$DEV_SRV -p 60022 "docker login -u $CI_REGISTRY_USER -p $CI_JOB_TOKEN $CI_REGISTRY && docker rm -f olacity && docker run -itd --name olacity -p 3003:3000 $CI_REGISTRY_IMAGE:$ENVIRONMENT-$CI_COMMIT_SHORT_SHA"
+  only:
+    - develop
