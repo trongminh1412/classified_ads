@@ -5,7 +5,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 import Link from 'next/link';
 import Image from 'next/image';
-import { userService } from 'services';
+import { userService, alertService } from 'services';
 import { Layout } from 'components/Account/Layout';
 import { AiOutlineEye } from 'react-icons/ai';
 import axios from 'axios';
@@ -60,15 +60,12 @@ export default function Register() {
       .then(() => {
         router.push('/auth/success');
       })
-      .catch(() => {
-        router.push('/auth/register');
-      });
+      .catch(alertService.error);
   }
 
   return (
     <>
       <Layout>
-        {' '}
         <div className="bg-background-auth">
           <Container className="py-5">
             <Row>

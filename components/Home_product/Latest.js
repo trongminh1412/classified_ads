@@ -13,14 +13,16 @@ function latest() {
     <>
       <div className="card__item">
         <Card>
-          <Image
-            src="/home/popular/1.svg"
-            alt="collection kids"
-            layout="responsive"
-            width={154}
-            height={154}
-            priority
-          />
+          <div>
+            <Image
+              src="/home/popular/1.svg"
+              alt="collection kids"
+              layout="responsive"
+              width={154}
+              height={154}
+              priority
+            />
+          </div>
           <div className="card__item--sub-img">
             <Link href="/">
               <a>

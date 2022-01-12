@@ -10,7 +10,6 @@ export default function Home() {
   return (
     <>
       <Navigation fixed />
-
       <section className="s-banner">
         <div className="s-banner__content">
           <div className="s-banner__content--image">
@@ -20,6 +19,7 @@ export default function Home() {
               layout="responsive"
               width={1440}
               height={300}
+              priority
             />
             <div className="s-banner__content--title text-center">
               <h1>Sell and buy near you</h1>
@@ -73,7 +73,7 @@ export default function Home() {
 
       <section className="s-main">
         <div className="s-main__content">
-          <Container style={{ 'max-width': '1500px' }}>
+          <Container>
             {/* content */}
             <Row>
               {/* ads left */}

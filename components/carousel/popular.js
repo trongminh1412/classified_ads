@@ -78,13 +78,15 @@ function popular(props) {
       <Slider {...settings}>
         <div className="card__item">
           <Card>
-            <Image
-              src="/home/popular/1.svg"
-              alt="collection kids"
-              layout="responsive"
-              width={154}
-              height={154}
-            />
+            <div>
+              <Image
+                src="/home/popular/1.svg"
+                alt="collection kids"
+                layout="responsive"
+                width={154}
+                height={154}
+              />
+            </div>
             <div className="card__item--sub-img">
               <Link href="/">
                 <a>
@@ -107,13 +109,15 @@ function popular(props) {
         </div>
         <div className="card__item">
           <Card>
-            <Image
-              src="/home/popular/2.svg"
-              alt="collection kids"
-              layout="responsive"
-              width={154}
-              height={154}
-            />
+            <div>
+              <Image
+                src="/home/popular/2.svg"
+                alt="collection kids"
+                layout="responsive"
+                width={154}
+                height={154}
+              />
+            </div>
             <div className="card__item--sub-img">
               <Link href="/">
                 <a>
@@ -136,13 +140,15 @@ function popular(props) {
         </div>
         <div className="card__item">
           <Card>
-            <Image
-              src="/home/popular/1.svg"
-              alt="collection kids"
-              layout="responsive"
-              width={154}
-              height={154}
-            />
+            <div>
+              <Image
+                src="/home/popular/1.svg"
+                alt="collection kids"
+                layout="responsive"
+                width={154}
+                height={154}
+              />
+            </div>
             <div className="card__item--sub-img">
               <Link href="/">
                 <a>
@@ -165,13 +171,15 @@ function popular(props) {
         </div>
         <div className="card__item">
           <Card>
-            <Image
-              src="/home/popular/2.svg"
-              alt="collection kids"
-              layout="responsive"
-              width={154}
-              height={154}
-            />
+            <div>
+              <Image
+                src="/home/popular/2.svg"
+                alt="collection kids"
+                layout="responsive"
+                width={154}
+                height={154}
+              />
+            </div>
             <div className="card__item--sub-img">
               <Link href="/">
                 <a>
@@ -194,13 +202,15 @@ function popular(props) {
         </div>
         <div className="card__item">
           <Card>
-            <Image
-              src="/home/popular/1.svg"
-              alt="collection kids"
-              layout="responsive"
-              width={154}
-              height={154}
-            />
+            <div>
+              <Image
+                src="/home/popular/1.svg"
+                alt="collection kids"
+                layout="responsive"
+                width={154}
+                height={154}
+              />
+            </div>
             <div className="card__item--sub-img">
               <Link href="/">
                 <a>
@@ -223,13 +233,15 @@ function popular(props) {
         </div>
         <div className="card__item">
           <Card>
-            <Image
-              src="/home/popular/2.svg"
-              alt="collection kids"
-              layout="responsive"
-              width={154}
-              height={154}
-            />
+            <div>
+              <Image
+                src="/home/popular/2.svg"
+                alt="collection kids"
+                layout="responsive"
+                width={154}
+                height={154}
+              />
+            </div>
             <div className="card__item--sub-img">
               <Link href="/">
                 <a>
@@ -252,13 +264,15 @@ function popular(props) {
         </div>
         <div className="card__item">
           <Card>
-            <Image
-              src="/home/popular/1.svg"
-              alt="collection kids"
-              layout="responsive"
-              width={154}
-              height={154}
-            />
+            <div>
+              <Image
+                src="/home/popular/1.svg"
+                alt="collection kids"
+                layout="responsive"
+                width={154}
+                height={154}
+              />
+            </div>
             <div className="card__item--sub-img">
               <Link href="/">
                 <a>
@@ -281,13 +295,15 @@ function popular(props) {
         </div>
         <div className="card__item">
           <Card>
-            <Image
-              src="/home/popular/2.svg"
-              alt="collection kids"
-              layout="responsive"
-              width={154}
-              height={154}
-            />
+            <div>
+              <Image
+                src="/home/popular/2.svg"
+                alt="collection kids"
+                layout="responsive"
+                width={154}
+                height={154}
+              />
+            </div>
             <div className="card__item--sub-img">
               <Link href="/">
                 <a>

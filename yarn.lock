@@ -2711,10 +2711,10 @@
   dependencies:
     "queue-microtask" "^1.2.2"
 
-"rxjs@^7.5.1":
-  "integrity" "sha512-KExVEeZWxMZnZhUZtsJcFwz8IvPvgu4G2Z2QyqjZQzUGr32KDYuSxrEYO4w3tFFNbfLozcrKUTvTPi+E9ywJkQ=="
-  "resolved" "https://registry.npmjs.org/rxjs/-/rxjs-7.5.1.tgz"
-  "version" "7.5.1"
+"rxjs@^7.5.2":
+  "integrity" "sha512-PwDt186XaL3QN5qXj/H9DGyHhP3/RYYgZZwqBv9Tv8rsAaiwFH1IsJJlcgD37J7UW5a6O67qX0KWKS3/pu0m4w=="
+  "resolved" "https://registry.npmjs.org/rxjs/-/rxjs-7.5.2.tgz"
+  "version" "7.5.2"
   dependencies:
     "tslib" "^2.1.0"
 

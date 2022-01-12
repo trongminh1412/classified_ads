@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '/styles/home.scss';
 import '/styles/globals.scss';
 import '/styles/country.scss';
+import { Alert } from 'components/Alert/Alert';
 import { SessionProvider } from 'next-auth/react';
 
 function MyApp({ Component, pageProps }) {
@@ -19,6 +20,7 @@ function MyApp({ Component, pageProps }) {
         <title> 7Hit | Classified Ads</title>
       </Head>
       <div>
+        <Alert />
         <Component {...pageProps} />
       </div>
     </>

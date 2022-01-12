@@ -338,6 +338,9 @@ $radius-collect: 25px;
 //section main
 .s-main {
   padding: 4rem 0 0.8rem 0;
+  .s-main__content > .container {
+    max-width: 1500px;
+  }
 
   //popular
   .s-popular {
@@ -487,4 +490,17 @@ $radius-collect: 25px;
 .footer-widget {
   background: $bg-dark-color;
   color: $while-color;
+}
+
+//alert
+.alert__style {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  max-width: 450px !important;
+  a {
+    cursor: pointer;
+  }
 }

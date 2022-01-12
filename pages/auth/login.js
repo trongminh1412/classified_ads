@@ -5,9 +5,9 @@ import { useForm } from 'react-hook-form';
 import { useRouter } from 'next/router';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
-import { userService } from 'services';
 import { Layout } from 'components/Account/Layout';
 import { AiOutlineEye } from 'react-icons/ai';
+import { userService, alertService } from 'services';
 import axios from 'axios';
 import {
   signIn,
@@ -63,9 +63,7 @@ export default function Login() {
         const returnUrl = router.query.returnUrl || '/';
         router.push(returnUrl);
       })
-      .catch(() => {
-        router.push('/auth/login');
-      });
+      .catch(alertService.error);
   }
   return (
     <>
