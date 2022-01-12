@@ -95,11 +95,23 @@ $radius-collect: 25px;
         }
       }
 
-      button.change_language {
+      .change_language {
+        display: inline-block;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+        text-align: center;
+        text-decoration: none;
+        vertical-align: middle;
+        position: relative;
+        z-index: 2;
         background: $gray2-color;
         border: 1px solid #ced4da;
         border-top-left-radius: $radius;
         border-bottom-left-radius: $radius;
+        user-select: none;
+        padding: 0.1px 12px;
+        font-size: 1.5rem;
       }
 
       .text-regist {

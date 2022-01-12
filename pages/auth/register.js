@@ -111,7 +111,7 @@ export default function Register() {
                         <FormGroup>
                           <Label for="Phone">Phone</Label>
                           <div className="input-group align-items-center input_search justify-content-center">
-                            <Button className="change_language">
+                            <div className="change_language">
                               <Link href="/country">
                                 <a>
                                   <Image
@@ -119,11 +119,11 @@ export default function Register() {
                                     alt="banner"
                                     layout="intrinsic"
                                     width={20}
-                                    height={14}
+                                    height={19}
                                   />
                                 </a>
                               </Link>
-                            </Button>
+                            </div>
                             <input
                               id="phone"
                               name="phone"
