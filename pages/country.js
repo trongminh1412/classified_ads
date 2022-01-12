@@ -28,7 +28,6 @@ export default function Home() {
                       alt="7Hit Logo"
                       width={90}
                       height={60}
-                      priority
                     />
                     <div className="image__title">Viet Nam</div>
                   </div>
@@ -38,7 +37,6 @@ export default function Home() {
                       alt="7Hit Logo"
                       width={90}
                       height={60}
-                      priority
                     />
                     <div className="image__title">Brazil</div>
                   </div>
@@ -48,7 +46,6 @@ export default function Home() {
                       alt="7Hit Logo"
                       width={90}
                       height={60}
-                      priority
                     />
                     <div className="image__title">India</div>
                   </div>
@@ -58,7 +55,6 @@ export default function Home() {
                       alt="7Hit Logo"
                       width={90}
                       height={60}
-                      priority
                     />
                     <div className="image__title">Indonesia</div>
                   </div>
@@ -68,7 +64,6 @@ export default function Home() {
                       alt="7Hit Logo"
                       width={90}
                       height={60}
-                      priority
                     />
                     <div className="image__title">USA</div>
                   </div>
@@ -78,7 +73,6 @@ export default function Home() {
                       alt="7Hit Logo"
                       width={90}
                       height={60}
-                      priority
                     />
                     <div className="image__title">Romania</div>
                   </div>
@@ -88,7 +82,6 @@ export default function Home() {
                       alt="7Hit Logo"
                       width={90}
                       height={60}
-                      priority
                     />
                     <div className="image__title">South Africa</div>
                   </div>

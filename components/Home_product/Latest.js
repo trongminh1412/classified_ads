@@ -20,7 +20,7 @@ function latest() {
               layout="responsive"
               width={154}
               height={154}
-              priority
+              priority="true"
             />
           </div>
           <div className="card__item--sub-img">
@@ -32,6 +32,7 @@ function latest() {
                   layout="intrinsic"
                   width={12}
                   height={12}
+                  priority="true"
                 />
               </a>
             </Link>

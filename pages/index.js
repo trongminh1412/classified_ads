@@ -19,7 +19,7 @@ export default function Home() {
               layout="responsive"
               width={1440}
               height={300}
-              priority
+              priority="true"
             />
             <div className="s-banner__content--title text-center">
               <h1>Sell and buy near you</h1>
@@ -33,6 +33,7 @@ export default function Home() {
                       layout="intrinsic"
                       width={20}
                       height={20}
+                      priority="true"
                     />
                   </div>
                   <Input
@@ -52,6 +53,7 @@ export default function Home() {
                       layout="intrinsic"
                       width={20}
                       height={20}
+                      priority="true"
                     />
                   </div>
                   <Input
@@ -87,7 +89,7 @@ export default function Home() {
                         width={200}
                         height={1500}
                         layout="responsive"
-                        priority
+                        priority="true"
                       />
                     </a>
                   </Link>
@@ -139,7 +141,7 @@ export default function Home() {
                                   width={60}
                                   height={60}
                                   layout="intrinsic"
-                                  priority
+                                  priority="true"
                                 />
                               </div>
                               <h6>Automobiles</h6>
@@ -154,7 +156,7 @@ export default function Home() {
                                   width={60}
                                   height={60}
                                   layout="intrinsic"
-                                  priority
+                                  priority="true"
                                 />
                               </div>
                               <h6>Phones & Tablets</h6>
@@ -169,7 +171,7 @@ export default function Home() {
                                   width={60}
                                   height={60}
                                   layout="intrinsic"
-                                  priority
+                                  priority="true"
                                 />
                               </div>
                               <h6>Electronics</h6>
@@ -184,7 +186,7 @@ export default function Home() {
                                   width={60}
                                   height={60}
                                   layout="intrinsic"
-                                  priority
+                                  priority="true"
                                 />
                               </div>
                               <h6>Furniture & Appliances</h6>
@@ -199,7 +201,7 @@ export default function Home() {
                                   width={60}
                                   height={60}
                                   layout="intrinsic"
-                                  priority
+                                  priority="true"
                                 />
                               </div>
                               <h6>Real estate</h6>
@@ -214,7 +216,7 @@ export default function Home() {
                                   width={60}
                                   height={60}
                                   layout="intrinsic"
-                                  priority
+                                  priority="true"
                                 />
                               </div>
                               <h6>Animals & Pets</h6>
@@ -229,7 +231,7 @@ export default function Home() {
                                   width={60}
                                   height={60}
                                   layout="intrinsic"
-                                  priority
+                                  priority="true"
                                 />
                               </div>
                               <h6>Fashion</h6>
@@ -244,7 +246,7 @@ export default function Home() {
                                   width={60}
                                   height={60}
                                   layout="intrinsic"
-                                  priority
+                                  priority="true"
                                 />
                               </div>
                               <h6>Beauty & Well being</h6>
@@ -259,7 +261,7 @@ export default function Home() {
                                   width={60}
                                   height={60}
                                   layout="intrinsic"
-                                  priority
+                                  priority="true"
                                 />
                               </div>
                               <h6>Jobs</h6>
@@ -274,7 +276,7 @@ export default function Home() {
                                   width={60}
                                   height={60}
                                   layout="intrinsic"
-                                  priority
+                                  priority="true"
                                 />
                               </div>
                               <h6>Services</h6>
@@ -289,7 +291,7 @@ export default function Home() {
                                   width={60}
                                   height={60}
                                   layout="intrinsic"
-                                  priority
+                                  priority="true"
                                 />
                               </div>
                               <h6>Learning</h6>
@@ -304,7 +306,7 @@ export default function Home() {
                                   width={60}
                                   height={60}
                                   layout="intrinsic"
-                                  priority
+                                  priority="true"
                                 />
                               </div>
                               <h6>Local Events</h6>
@@ -381,7 +383,7 @@ export default function Home() {
                         width={200}
                         height={1500}
                         layout="responsive"
-                        priority
+                        priority="true"
                       />
                     </a>
                   </Link>
@@ -400,7 +402,7 @@ export default function Home() {
                       width={1500}
                       height={200}
                       layout="responsive"
-                      priority
+                      priority="true"
                     />
                   </a>
                 </Link>

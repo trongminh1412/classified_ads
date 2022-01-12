@@ -81,7 +81,6 @@ export default function Login() {
                         alt="7Hit Logo"
                         width={120}
                         height={50}
-                        priority
                       />
                     </CardTitle>
                     <CardSubtitle>

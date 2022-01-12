@@ -16,7 +16,7 @@ function NextArrow(props) {
         layout="fixed"
         width={60}
         height={60}
-        priority
+        priority="true"
       />
     </div>
   );
@@ -32,7 +32,7 @@ function PrevArrow(props) {
         layout="fixed"
         width={60}
         height={60}
-        priority
+        priority="true"
       />
     </div>
   );
@@ -85,6 +85,7 @@ function popular(props) {
                 layout="responsive"
                 width={154}
                 height={154}
+                priority="true"
               />
             </div>
             <div className="card__item--sub-img">
@@ -96,6 +97,7 @@ function popular(props) {
                     layout="intrinsic"
                     width={12}
                     height={12}
+                    priority="true"
                   />
                 </a>
               </Link>
@@ -116,6 +118,7 @@ function popular(props) {
                 layout="responsive"
                 width={154}
                 height={154}
+                priority="true"
               />
             </div>
             <div className="card__item--sub-img">
@@ -127,6 +130,7 @@ function popular(props) {
                     layout="intrinsic"
                     width={12}
                     height={12}
+                    priority="true"
                   />
                 </a>
               </Link>
@@ -147,6 +151,7 @@ function popular(props) {
                 layout="responsive"
                 width={154}
                 height={154}
+                priority="true"
               />
             </div>
             <div className="card__item--sub-img">
@@ -158,6 +163,7 @@ function popular(props) {
                     layout="intrinsic"
                     width={12}
                     height={12}
+                    priority="true"
                   />
                 </a>
               </Link>
@@ -178,6 +184,7 @@ function popular(props) {
                 layout="responsive"
                 width={154}
                 height={154}
+                priority="true"
               />
             </div>
             <div className="card__item--sub-img">
@@ -189,6 +196,7 @@ function popular(props) {
                     layout="intrinsic"
                     width={12}
                     height={12}
+                    priority="true"
                   />
                 </a>
               </Link>
@@ -209,6 +217,7 @@ function popular(props) {
                 layout="responsive"
                 width={154}
                 height={154}
+                priority="true"
               />
             </div>
             <div className="card__item--sub-img">
@@ -220,6 +229,7 @@ function popular(props) {
                     layout="intrinsic"
                     width={12}
                     height={12}
+                    priority="true"
                   />
                 </a>
               </Link>
@@ -240,6 +250,7 @@ function popular(props) {
                 layout="responsive"
                 width={154}
                 height={154}
+                priority="true"
               />
             </div>
             <div className="card__item--sub-img">
@@ -251,6 +262,7 @@ function popular(props) {
                     layout="intrinsic"
                     width={12}
                     height={12}
+                    priority="true"
                   />
                 </a>
               </Link>
@@ -271,6 +283,7 @@ function popular(props) {
                 layout="responsive"
                 width={154}
                 height={154}
+                priority="true"
               />
             </div>
             <div className="card__item--sub-img">
@@ -282,6 +295,7 @@ function popular(props) {
                     layout="intrinsic"
                     width={12}
                     height={12}
+                    priority="true"
                   />
                 </a>
               </Link>
@@ -302,6 +316,7 @@ function popular(props) {
                 layout="responsive"
                 width={154}
                 height={154}
+                priority="true"
               />
             </div>
             <div className="card__item--sub-img">
@@ -313,6 +328,7 @@ function popular(props) {
                     layout="intrinsic"
                     width={12}
                     height={12}
+                    priority="true"
                   />
                 </a>
               </Link>

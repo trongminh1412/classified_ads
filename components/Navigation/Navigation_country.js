@@ -104,7 +104,6 @@ const Navigation_country = () => {
                       alt="7Hit Logo"
                       width={120}
                       height={50}
-                      priority
                     />
                   </a>
                 </Link>

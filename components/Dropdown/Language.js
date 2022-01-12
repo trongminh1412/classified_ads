@@ -25,6 +25,7 @@ function Language(props) {
               width={30}
               height={30}
               layout="fixed"
+              priority="true"
             />
           </h6>
           <VscChevronDown />

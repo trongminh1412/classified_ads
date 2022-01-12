@@ -64,6 +64,7 @@ function footer(props) {
                             layout="intrinsic"
                             width={189}
                             height={28}
+                            priority="true"
                           />
                         </a>
                       </Link>

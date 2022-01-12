@@ -104,7 +104,7 @@ const Navigation_index = () => {
                   alt="7Hit Logo"
                   width={120}
                   height={50}
-                  priority
+                  priority="true"
                 />
               </div>
 

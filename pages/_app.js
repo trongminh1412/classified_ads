@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <link rel="icon" type="image/png" href="/favicon.png" priority></link>
+        <link rel="icon" type="image/png" href="/favicon.png"></link>
         <title> 7Hit | Classified Ads</title>
       </Head>
       <div>

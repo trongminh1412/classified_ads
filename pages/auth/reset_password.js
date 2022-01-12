@@ -65,7 +65,6 @@ export default function Reset_password() {
                       alt="7Hit Logo"
                       width={120}
                       height={50}
-                      priority
                     />
                     <h1 className="font-bold pt-4">Reset Password</h1>
                   </CardTitle>

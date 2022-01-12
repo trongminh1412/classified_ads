@@ -78,7 +78,6 @@ export default function Register() {
                         alt="7Hit Logo"
                         width={120}
                         height={50}
-                        priority
                       />
                       <h1 className="font-bold px-4 pt-3">Create an account</h1>
                     </CardTitle>

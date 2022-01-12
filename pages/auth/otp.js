@@ -51,7 +51,6 @@ export default function OTP() {
                       alt="7Hit Logo"
                       width={120}
                       height={50}
-                      priority
                     />
                     <h1 className="font-bold pt-4">Enter OTP</h1>
                   </CardTitle>

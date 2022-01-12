@@ -80,6 +80,7 @@ export default function Success() {
                   alt="7Hit Logo"
                   width={473}
                   height={409}
+                  layout="responsive"
                 />
               </div>
             </Col>
