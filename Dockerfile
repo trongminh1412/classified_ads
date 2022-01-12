@@ -8,13 +8,14 @@ WORKDIR /app
 COPY . .
 COPY --from=dependencies /app/node_modules ./node_modules
 RUN yarn build
+RUN yarn add sharp
 
 FROM node:lts as runner
 WORKDIR /app
 # If you are using a custom next.config.js file, uncomment this line.
 COPY --from=builder /app/next.config.js ./
 COPY --from=builder /app/public ./public
-COPY --from=builder /app/build ./build
+COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/package.json ./package.json
 
