@@ -37,6 +37,24 @@ function PrevArrow(props) {
     </div>
   );
 }
+
+export const data = [
+  '/home/popular/1.svg',
+  '/home/popular/2.svg',
+  '/home/popular/1.svg',
+  '/home/popular/2.svg',
+  '/home/popular/1.svg',
+  '/home/popular/2.svg',
+  '/home/popular/1.svg',
+  '/home/popular/2.svg',
+];
+
+const imagePopular = ({ src, width, quality }) => {
+  return `${process.env.NEXT_PUBLIC_APP_URL}/${src}?w=${width}&q=${
+    quality || 75
+  }`;
+};
+
 function popular(props) {
   const settings = {
     dots: false,
@@ -76,270 +94,42 @@ function popular(props) {
   return (
     <>
       <Slider {...settings}>
-        <div className="card__item">
-          <Card>
-            <div>
-              <Image
-                src="/home/popular/1.svg"
-                alt="collection kids"
-                layout="responsive"
-                width={154}
-                height={154}
-                priority="true"
-              />
-            </div>
-            <div className="card__item--sub-img">
-              <Link href="/">
-                <a>
-                  <Image
-                    src="/home/popular/sub_img.svg"
-                    alt="collection kids"
-                    layout="intrinsic"
-                    width={12}
-                    height={12}
-                    priority="true"
-                  />
-                </a>
-              </Link>
-              <span className="ps-1">5</span>
-            </div>
-            <CardBody className="text-center">
-              <h6 className="fs-14 fw-bold"> Parrot Anafi</h6>
-              <h6 className="fs-14 fw-bold text-warning">$18</h6>
-            </CardBody>
-          </Card>
-        </div>
-        <div className="card__item">
-          <Card>
-            <div>
-              <Image
-                src="/home/popular/2.svg"
-                alt="collection kids"
-                layout="responsive"
-                width={154}
-                height={154}
-                priority="true"
-              />
-            </div>
-            <div className="card__item--sub-img">
-              <Link href="/">
-                <a>
-                  <Image
-                    src="/home/popular/sub_img.svg"
-                    alt="collection kids"
-                    layout="intrinsic"
-                    width={12}
-                    height={12}
-                    priority="true"
-                  />
-                </a>
-              </Link>
-              <span className="ps-1">5</span>
-            </div>
-            <CardBody className="text-center">
-              <h6 className="fs-14 fw-bold"> Parrot Anafi</h6>
-              <h6 className="fs-14 fw-bold text-warning">$18</h6>
-            </CardBody>
-          </Card>
-        </div>
-        <div className="card__item">
-          <Card>
-            <div>
-              <Image
-                src="/home/popular/1.svg"
-                alt="collection kids"
-                layout="responsive"
-                width={154}
-                height={154}
-                priority="true"
-              />
-            </div>
-            <div className="card__item--sub-img">
-              <Link href="/">
-                <a>
-                  <Image
-                    src="/home/popular/sub_img.svg"
-                    alt="collection kids"
-                    layout="intrinsic"
-                    width={12}
-                    height={12}
-                    priority="true"
-                  />
-                </a>
-              </Link>
-              <span className="ps-1">5</span>
-            </div>
-            <CardBody className="text-center">
-              <h6 className="fs-14 fw-bold"> Parrot Anafi</h6>
-              <h6 className="fs-14 fw-bold text-warning">$18</h6>
-            </CardBody>
-          </Card>
-        </div>
-        <div className="card__item">
-          <Card>
-            <div>
-              <Image
-                src="/home/popular/2.svg"
-                alt="collection kids"
-                layout="responsive"
-                width={154}
-                height={154}
-                priority="true"
-              />
-            </div>
-            <div className="card__item--sub-img">
-              <Link href="/">
-                <a>
-                  <Image
-                    src="/home/popular/sub_img.svg"
-                    alt="collection kids"
-                    layout="intrinsic"
-                    width={12}
-                    height={12}
-                    priority="true"
-                  />
-                </a>
-              </Link>
-              <span className="ps-1">5</span>
-            </div>
-            <CardBody className="text-center">
-              <h6 className="fs-14 fw-bold"> Parrot Anafi</h6>
-              <h6 className="fs-14 fw-bold text-warning">$18</h6>
-            </CardBody>
-          </Card>
-        </div>
-        <div className="card__item">
-          <Card>
-            <div>
-              <Image
-                src="/home/popular/1.svg"
-                alt="collection kids"
-                layout="responsive"
-                width={154}
-                height={154}
-                priority="true"
-              />
-            </div>
-            <div className="card__item--sub-img">
-              <Link href="/">
-                <a>
-                  <Image
-                    src="/home/popular/sub_img.svg"
-                    alt="collection kids"
-                    layout="intrinsic"
-                    width={12}
-                    height={12}
-                    priority="true"
-                  />
-                </a>
-              </Link>
-              <span className="ps-1">5</span>
-            </div>
-            <CardBody className="text-center">
-              <h6 className="fs-14 fw-bold"> Parrot Anafi</h6>
-              <h6 className="fs-14 fw-bold text-warning">$18</h6>
-            </CardBody>
-          </Card>
-        </div>
-        <div className="card__item">
-          <Card>
-            <div>
-              <Image
-                src="/home/popular/2.svg"
-                alt="collection kids"
-                layout="responsive"
-                width={154}
-                height={154}
-                priority="true"
-              />
-            </div>
-            <div className="card__item--sub-img">
-              <Link href="/">
-                <a>
-                  <Image
-                    src="/home/popular/sub_img.svg"
-                    alt="collection kids"
-                    layout="intrinsic"
-                    width={12}
-                    height={12}
-                    priority="true"
-                  />
-                </a>
-              </Link>
-              <span className="ps-1">5</span>
-            </div>
-            <CardBody className="text-center">
-              <h6 className="fs-14 fw-bold"> Parrot Anafi</h6>
-              <h6 className="fs-14 fw-bold text-warning">$18</h6>
-            </CardBody>
-          </Card>
-        </div>
-        <div className="card__item">
-          <Card>
-            <div>
-              <Image
-                src="/home/popular/1.svg"
-                alt="collection kids"
-                layout="responsive"
-                width={154}
-                height={154}
-                priority="true"
-              />
-            </div>
-            <div className="card__item--sub-img">
-              <Link href="/">
-                <a>
-                  <Image
-                    src="/home/popular/sub_img.svg"
-                    alt="collection kids"
-                    layout="intrinsic"
-                    width={12}
-                    height={12}
-                    priority="true"
-                  />
-                </a>
-              </Link>
-              <span className="ps-1">5</span>
-            </div>
-            <CardBody className="text-center">
-              <h6 className="fs-14 fw-bold"> Parrot Anafi</h6>
-              <h6 className="fs-14 fw-bold text-warning">$18</h6>
-            </CardBody>
-          </Card>
-        </div>
-        <div className="card__item">
-          <Card>
-            <div>
-              <Image
-                src="/home/popular/2.svg"
-                alt="collection kids"
-                layout="responsive"
-                width={154}
-                height={154}
-                priority="true"
-              />
-            </div>
-            <div className="card__item--sub-img">
-              <Link href="/">
-                <a>
-                  <Image
-                    src="/home/popular/sub_img.svg"
-                    alt="collection kids"
-                    layout="intrinsic"
-                    width={12}
-                    height={12}
-                    priority="true"
-                  />
-                </a>
-              </Link>
-              <span className="ps-1">5</span>
-            </div>
-            <CardBody className="text-center">
-              <h6 className="fs-14 fw-bold"> Parrot Anafi</h6>
-              <h6 className="fs-14 fw-bold text-warning">$18</h6>
-            </CardBody>
-          </Card>
-        </div>
+        {data.map((id, index) => (
+          <div className="card__item" key={index}>
+            <Card>
+              <div>
+                <Image
+                  loader={imagePopular}
+                  src={id}
+                  alt="collection kids"
+                  layout="responsive"
+                  width={154}
+                  height={154}
+                  priority="true"
+                />
+              </div>
+              <div className="card__item--sub-img">
+                <Link href="/">
+                  <a>
+                    <Image
+                      src="/home/popular/sub_img.svg"
+                      alt="collection kids"
+                      layout="intrinsic"
+                      width={12}
+                      height={12}
+                      priority="true"
+                    />
+                  </a>
+                </Link>
+                <span className="ps-1">5</span>
+              </div>
+              <CardBody className="text-center">
+                <h6 className="fs-14 fw-bold"> Parrot Anafi</h6>
+                <h6 className="fs-14 fw-bold text-warning">$18</h6>
+              </CardBody>
+            </Card>
+          </div>
+        ))}
       </Slider>
     </>
   );

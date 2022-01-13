@@ -3,7 +3,34 @@ import Link from 'next/link';
 import { Container, Col, Row, Card, CardBody, Button } from 'reactstrap';
 import Navigation_country from 'components/Navigation/Navigation_country';
 
-export default function Home() {
+export const data = {
+  src: [
+    '/country/VN.png',
+    '/country/BR.png',
+    '/country/IN.png',
+    '/country/MC.png',
+    '/country/US.png',
+    '/country/RO.png',
+    '/country/ZA.png',
+  ],
+  title: [
+    'Viet Nam',
+    'Brazil',
+    'India',
+    'Indonesia',
+    'USA',
+    'Romania',
+    'South Africa',
+  ],
+};
+
+const imageCountry = ({ src, width, quality }) => {
+  return `${process.env.NEXT_PUBLIC_APP_URL}/${src}?w=${width}&q=${
+    quality || 75
+  }`;
+};
+
+function Home() {
   return (
     <>
       <Navigation_country fixed />
@@ -22,69 +49,18 @@ export default function Home() {
                 </div>
 
                 <div className="content--body__card d-flex justify-content-evenly align-items-center text-center">
-                  <div className="card-image">
-                    <Image
-                      src="/country/VN.png"
-                      alt="7Hit Logo"
-                      width={90}
-                      height={60}
-                    />
-                    <div className="image__title">Viet Nam</div>
-                  </div>
-                  <div className="card-image">
-                    <Image
-                      src="/country/BR.png"
-                      alt="7Hit Logo"
-                      width={90}
-                      height={60}
-                    />
-                    <div className="image__title">Brazil</div>
-                  </div>
-                  <div className="card-image">
-                    <Image
-                      src="/country/IN.png"
-                      alt="7Hit Logo"
-                      width={90}
-                      height={60}
-                    />
-                    <div className="image__title">India</div>
-                  </div>
-                  <div className="card-image">
-                    <Image
-                      src="/country/MC.png"
-                      alt="7Hit Logo"
-                      width={90}
-                      height={60}
-                    />
-                    <div className="image__title">Indonesia</div>
-                  </div>
-                  <div className="card-image">
-                    <Image
-                      src="/country/US.png"
-                      alt="7Hit Logo"
-                      width={90}
-                      height={60}
-                    />
-                    <div className="image__title">USA</div>
-                  </div>
-                  <div className="card-image">
-                    <Image
-                      src="/country/RO.png"
-                      alt="7Hit Logo"
-                      width={90}
-                      height={60}
-                    />
-                    <div className="image__title">Romania</div>
-                  </div>
-                  <div className="card-image">
-                    <Image
-                      src="/country/ZA.png"
-                      alt="7Hit Logo"
-                      width={90}
-                      height={60}
-                    />
-                    <div className="image__title">South Africa</div>
-                  </div>
+                  {data.src.map((src, index) => (
+                    <div className="card-image" key={index}>
+                      <Image
+                        loader={imageCountry}
+                        src={src}
+                        alt="7Hit Logo"
+                        width={90}
+                        height={60}
+                      />
+                      <div className="image__title">{data.title[index]}</div>
+                    </div>
+                  ))}
                 </div>
               </div>
 
@@ -118,3 +94,5 @@ export default function Home() {
     </>
   );
 }
+
+export default Home;
