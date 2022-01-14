@@ -18,6 +18,9 @@ import {
   Input,
 } from 'reactstrap';
 
+import Popup from 'reactjs-popup';
+import Login from '../../pages/auth/login';
+
 const Navigation_index = () => {
   //sticky navbar
   const [isOpen, setIsOpen] = useState(false);
@@ -90,6 +93,9 @@ const Navigation_index = () => {
 
   return (
     <>
+      {/* <Popup trigger={<button> Trigger</button>} position="right center">
+        <Login />
+      </Popup> */}
       <div
         className={`header bg-light shadow-sm p-2 bg-body rounded${
           sticky ? ' sticky-top ' : ''
@@ -144,9 +150,17 @@ const Navigation_index = () => {
                       </h6>
                     </>
                   ) : (
-                    <h6 className="m-0">
-                      <Link href="/auth/login"> Log in</Link>
-                    </h6>
+                    <Popup
+                      trigger={
+                        <h6 className="m-0" style={{ cursor: 'pointer' }}>
+                          {' '}
+                          Log in{' '}
+                        </h6>
+                      }
+                    >
+                      {' '}
+                      <Login />
+                    </Popup>
                   )}
                 </div>
               </div>

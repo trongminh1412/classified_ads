@@ -60,7 +60,7 @@ export default function Login() {
     return userService
       .login(email, password)
       .then(() => {
-        const returnUrl = router.query.returnUrl || '/';
+        const returnUrl = router.query.returnUrl || '/home';
         router.push(returnUrl);
       })
       .catch(alertService.error);

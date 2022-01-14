@@ -1,207 +1,97 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import Navigation from 'components/Navigation/Navigation_index';
-import Popular from 'components/carousel/popular';
-import Footer from 'components/Footers/footer';
-import Latest from 'components/Home_product/Latest';
-import Category from 'components/Home_product/Category';
-import { BiSearchAlt2 } from 'react-icons/bi';
+import { BsClock } from 'react-icons/bs';
+import { AiOutlineFolder } from 'react-icons/ai';
+import { GoLocation } from 'react-icons/go';
+import { CgChevronDoubleRight } from 'react-icons/cg';
+import { VscBookmark } from 'react-icons/vsc';
+import { IconContext } from 'react-icons';
 import { Container, Row, Col, Input, Button, Card, CardBody } from 'reactstrap';
-export default function Home() {
+
+export const data = [
+  '/home/popular/1.svg',
+  '/home/popular/2.svg',
+  '/home/popular/1.svg',
+  '/home/popular/2.svg',
+  '/home/popular/1.svg',
+  '/home/popular/2.svg',
+  '/home/popular/1.svg',
+  '/home/popular/2.svg',
+  '/home/popular/1.svg',
+  '/home/popular/2.svg',
+];
+
+const imageLatest = ({ src, width, quality }) => {
+  return `${process.env.NEXT_PUBLIC_APP_URL}/${src}?w=${width}&q=${
+    quality || 75
+  }`;
+};
+
+function latest() {
   return (
     <>
-      <Navigation fixed />
-      <section className="s-banner">
-        <div className="s-banner__content">
-          <div className="s-banner__content--image">
-            <Image
-              src="/home/banner.svg"
-              alt="banner"
-              layout="responsive"
-              width={1440}
-              height={300}
-              priority="true"
-            />
-            <div className="s-banner__content--title text-center">
-              <h1>Sell and buy near you</h1>
-              <h6>Simple, fast and efficient</h6>
-              <div className="input-group align-items-center input_search justify-content-center">
-                <div className="position-relative">
-                  <div className="input_search--sticker">
-                    <Image
-                      src="/home/box_search.svg"
-                      alt="banner"
-                      layout="intrinsic"
-                      width={20}
-                      height={20}
-                      priority="true"
-                    />
-                  </div>
-                  <Input
-                    type="text"
-                    className="form-control form-search-left"
-                    placeholder="What?"
-                    aria-label="Search"
-                    aria-describedby="basic-addon"
-                  />
-                  <div className="border_center"></div>
-                </div>
-                <div className="position-relative">
-                  <div className="input_search--sticker">
-                    <Image
-                      src="/home/sticker_search.svg"
-                      alt="banner"
-                      layout="intrinsic"
-                      width={20}
-                      height={20}
-                      priority="true"
-                    />
-                  </div>
-                  <Input
-                    type="text"
-                    className="form-control form-search-right"
-                    placeholder="Where?"
-                    aria-label="Search"
-                    aria-describedby="basic-addon"
+      <Row className="row-cols-xl-5 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1">
+        {data.map((id, index) => (
+          <Col className="py-2" key={index}>
+            <div className="card__item">
+              <Card>
+                <div>
+                  <Image
+                    loader={imageLatest}
+                    src={id}
+                    alt="collection kids"
+                    layout="responsive"
+                    width={154}
+                    height={154}
+                    priority="true"
                   />
                 </div>
-                <Button className="input-group-text" type="submit">
-                  <BiSearchAlt2 />
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="s-main">
-        <div className="s-main__content">
-          <Container>
-            {/* content */}
-            <Row>
-              {/* ads left */}
-              <Col md="2" className="d-none d-md-block">
-                <div className="ads pt-5">
-                  <Link href="/">
+                <div className="card__item--sub-img">
+                  <Link href="/home">
                     <a>
                       <Image
-                        src="/home/event.png"
-                        alt="7Hit Logo"
-                        width={200}
-                        height={1500}
-                        layout="responsive"
+                        src="/home/popular/sub_img.svg"
+                        alt="collection kids"
+                        layout="intrinsic"
+                        width={12}
+                        height={12}
                         priority="true"
                       />
                     </a>
                   </Link>
+                  <span className="ps-1">5</span>
                 </div>
-              </Col>
-
-              {/* content */}
-              <Col md="8">
-                {/* popular */}
-                <section className="s-popular">
-                  <div className="s-popular__content">
-                    <Container>
-                      <div className="s-popular__content--title d-flex flex-wrap align-items-center">
-                        <h4>
-                          <span className="fw-bold">Popular</span> Listings
-                        </h4>
-                        <h6 className="border-bottom border-dark ms-auto">
-                          View more
-                        </h6>
-                      </div>
-                      <div className="s-popular__content__body">
-                        <Popular />
-                      </div>
-                    </Container>
+                <CardBody className="text-start px-2">
+                  <h6 className="fs-14 fw-bold py-1">Iphone 12 white color</h6>
+                  <div className="fs-10 py-1">
+                    <BsClock /> 13h hours ago
                   </div>
-                </section>
-
-                {/* category */}
-                <section className="s-category">
-                  <Container>
-                    <div className="s-category__content">
-                      <div className="s-category__content--title d-flex flex-wrap align-items-center">
-                        <h4>
-                          Browse by
-                          <span className="fw-bold"> Category</span>
-                        </h4>
-                        <h6 className="border-bottom border-dark ms-auto">
-                          View more
-                        </h6>
-                      </div>
-                      <div className="s-category__content__body">
-                        <Category />
-                      </div>
+                  <div className="fs-10 py-1 d-flex">
+                    <AiOutlineFolder />
+                    <div className="ps-1">
+                      Phone & Tablets
+                      <span className="text-warning">
+                        <CgChevronDoubleRight /> Mobile phones
+                      </span>
                     </div>
-                  </Container>
-                </section>
-
-                {/* latest */}
-                <section className="s-latest">
-                  <div className="s-latest__content">
-                    <Container>
-                      <div className="s-latest__content--title d-flex flex-wrap align-items-center">
-                        <h4>
-                          <span className="fw-bold">Latest</span> Listings
-                        </h4>
-                        <h6 className="border-bottom border-dark ms-auto">
-                          View more
-                        </h6>
-                      </div>
-                      <div className="s-latest__content__body">
-                        <Latest />
-                      </div>
-                    </Container>
                   </div>
-                  <div className="s-latest__footer">
-                    <a className="btn btn_load "> Load more</a>
+                  <div className="fs-10 py-1">
+                    <GoLocation /> Ellsworth
                   </div>
-                </section>
-              </Col>
-
-              {/* ads right */}
-              <Col md="2" className="d-none d-md-block">
-                <div className="ads pt-5">
-                  <Link href="/">
-                    <a>
-                      <Image
-                        src="/home/event.png"
-                        alt="7Hit Logo"
-                        width={200}
-                        height={1500}
-                        layout="responsive"
-                        priority="true"
-                      />
-                    </a>
-                  </Link>
-                </div>
-              </Col>
-            </Row>
-
-            {/* ads footer */}
-            <Row className="pt-5">
-              <div className="ads">
-                <Link href="/">
-                  <a>
-                    <Image
-                      src="/home/event-bottom.png"
-                      alt="7Hit Logo"
-                      width={1500}
-                      height={200}
-                      layout="responsive"
-                      priority="true"
-                    />
-                  </a>
-                </Link>
-              </div>
-            </Row>
-          </Container>
-        </div>
-      </section>
-
-      <Footer />
+                  <div className="d-flex justify-content-between align-items-center py-1 text_price">
+                    <h6 className="mb-0">$49,192</h6>
+                    <div className="bookmark">
+                      <VscBookmark />
+                    </div>
+                  </div>
+                </CardBody>
+              </Card>
+            </div>
+          </Col>
+        ))}
+      </Row>
     </>
   );
 }
+
+export default latest;
