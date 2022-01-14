@@ -81,7 +81,7 @@ export default function Home() {
             <Row>
               {/* ads left */}
               <Col md="2" className="d-none d-md-block">
-                <div className="ads pt-5">
+                <div className="ads mt-5">
                   <Link href="/">
                     <a>
                       <Image
@@ -163,7 +163,7 @@ export default function Home() {
 
               {/* ads right */}
               <Col md="2" className="d-none d-md-block">
-                <div className="ads pt-5">
+                <div className="ads mt-5">
                   <Link href="/">
                     <a>
                       <Image
@@ -181,7 +181,7 @@ export default function Home() {
             </Row>
 
             {/* ads footer */}
-            <Row className="pt-5">
+            <Row className="mt-5">
               <div className="ads">
                 <Link href="/">
                   <a>
