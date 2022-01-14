@@ -1,207 +1,122 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import Navigation from 'components/Navigation/Navigation_index';
-import Popular from 'components/carousel/popular';
-import Footer from 'components/Footers/footer';
-import Latest from 'components/Home_product/Latest';
-import Category from 'components/Home_product/Category';
-import { BiSearchAlt2 } from 'react-icons/bi';
-import { Container, Row, Col, Input, Button, Card, CardBody } from 'reactstrap';
-export default function Home() {
+import { Container, Col, Row, Card, CardBody, Button } from 'reactstrap';
+import Navigation_country from 'components/Navigation/Navigation_country';
+
+export const data = {
+  src: [
+    '/country/VN.png',
+    '/country/BR.png',
+    '/country/IN.png',
+    '/country/MC.png',
+    '/country/US.png',
+    '/country/RO.png',
+    '/country/ZA.png',
+  ],
+  title: [
+    'Viet Nam',
+    'Brazil',
+    'India',
+    'Indonesia',
+    'USA',
+    'Romania',
+    'South Africa',
+  ],
+};
+
+const imageCountry = ({ src, width, quality }) => {
+  return `${process.env.NEXT_PUBLIC_APP_URL}/${src}?w=${width}&q=${
+    quality || 75
+  }`;
+};
+
+function Home() {
   return (
     <>
-      <Navigation fixed />
-      <section className="s-banner">
-        <div className="s-banner__content">
-          <div className="s-banner__content--image">
-            <Image
-              src="/home/banner.svg"
-              alt="banner"
-              layout="responsive"
-              width={1440}
-              height={300}
-              priority="true"
-            />
-            <div className="s-banner__content--title text-center">
-              <h1>Sell and buy near you</h1>
-              <h6>Simple, fast and efficient</h6>
-              <div className="input-group align-items-center input_search justify-content-center">
-                <div className="position-relative">
-                  <div className="input_search--sticker">
-                    <Image
-                      src="/home/box_search.svg"
-                      alt="banner"
-                      layout="intrinsic"
-                      width={20}
-                      height={20}
-                      priority="true"
-                    />
-                  </div>
-                  <Input
-                    type="text"
-                    className="form-control form-search-left"
-                    placeholder="What?"
-                    aria-label="Search"
-                    aria-describedby="basic-addon"
-                  />
-                  <div className="border_center"></div>
-                </div>
-                <div className="position-relative">
-                  <div className="input_search--sticker">
-                    <Image
-                      src="/home/sticker_search.svg"
-                      alt="banner"
-                      layout="intrinsic"
-                      width={20}
-                      height={20}
-                      priority="true"
-                    />
-                  </div>
-                  <Input
-                    type="text"
-                    className="form-control form-search-right"
-                    placeholder="Where?"
-                    aria-label="Search"
-                    aria-describedby="basic-addon"
-                  />
-                </div>
-                <Button className="input-group-text" type="submit">
-                  <BiSearchAlt2 />
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Navigation_country fixed />
 
-      <section className="s-main">
-        <div className="s-main__content">
+      <section className="s-country">
+        <div className="s-country__content pb-2">
           <Container>
-            {/* content */}
             <Row>
-              {/* ads left */}
-              <Col md="2" className="d-none d-md-block">
-                <div className="ads mt-5">
-                  <Link href="/">
-                    <a>
-                      <Image
-                        src="/home/event.png"
-                        alt="7Hit Logo"
-                        width={200}
-                        height={1500}
-                        layout="responsive"
-                        priority="true"
-                      />
-                    </a>
-                  </Link>
+              <div className="s-country__content--title text-light text-center p-4">
+                <h1>Sell and buy near you</h1>
+              </div>
+
+              <div className="s-country__content--body text-light pt-5">
+                <div className="content--title text-center pb-4">
+                  <h4>Find your community below </h4>
                 </div>
-              </Col>
 
-              {/* content */}
-              <Col md="8">
-                {/* popular */}
-                <section className="s-popular">
-                  <div className="s-popular__content">
-                    <Container>
-                      <div className="s-popular__content--title d-flex flex-wrap align-items-center">
-                        <h4>
-                          <span className="fw-bold">Popular</span> Listings
-                        </h4>
-                        <h6 className="border-bottom border-dark ms-auto">
-                          View more
-                        </h6>
-                      </div>
-                      <div className="s-popular__content__body">
-                        <Popular />
-                      </div>
-                    </Container>
-                  </div>
-                </section>
+                <div className="content--body__card d-flex justify-content-evenly align-items-center text-center">
+                  {data.src.map((src, index) => (
+                    <div className="card-image" key={index}>
+                      <Link href="/home">
+                        <a>
+                          <Image
+                            loader={imageCountry}
+                            src={src}
+                            alt="7Hit Logo"
+                            width={90}
+                            height={60}
+                          />
+                        </a>
+                      </Link>
+                      <div className="image__title">{data.title[index]}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
 
-                {/* category */}
-                <section className="s-category">
-                  <Container>
-                    <div className="s-category__content">
-                      <div className="s-category__content--title d-flex flex-wrap align-items-center">
-                        <h4>
-                          Browse by
-                          <span className="fw-bold"> Category</span>
-                        </h4>
-                        <h6 className="border-bottom border-dark ms-auto">
-                          View more
-                        </h6>
+              <div className="s-country__footer text-light text-center p-5">
+                <div className="footer--title pb-4">
+                  <h4>More communities</h4>
+                </div>
+                <div className="footer--body ">
+                  <div className="footer--body_content ">
+                    <div className="content_top d-flex justify-content-evenly align-items-center flex-wrap text-center">
+                      <div>
+                        <Link href="/home">Argentina</Link>
                       </div>
-                      <div className="s-category__content__body">
-                        <Category />
+                      <div>
+                        <Link href="/home">Bosnia and Herzegovina</Link>
+                      </div>
+                      <div>
+                        <Link href="/home">Bulgaria</Link>
+                      </div>
+                      <div>
+                        <Link href="/home">Colombia</Link>
+                      </div>
+                      <div>
+                        <Link href="/home">Ecuador</Link>
+                      </div>
+                      <div>
+                        <Link href="/home">Kazakhstan</Link>
+                      </div>
+                      <div>
+                        <Link href="/home">Peru</Link>
+                      </div>
+                      <div>
+                        <Link href="/home">Poland</Link>
                       </div>
                     </div>
-                  </Container>
-                </section>
-
-                {/* latest */}
-                <section className="s-latest">
-                  <div className="s-latest__content">
-                    <Container>
-                      <div className="s-latest__content--title d-flex flex-wrap align-items-center">
-                        <h4>
-                          <span className="fw-bold">Latest</span> Listings
-                        </h4>
-                        <h6 className="border-bottom border-dark ms-auto">
-                          View more
-                        </h6>
+                    <div className="content_bottom d-flex justify-content-center align-items-center flex-wrap text-center pt-4">
+                      <div className="mx-5">
+                        <Link href="/home">Ukraine</Link>
                       </div>
-                      <div className="s-latest__content__body">
-                        <Latest />
+                      <div className="mx-5">
+                        <Link href="/home">Uzbekistan</Link>
                       </div>
-                    </Container>
+                    </div>
                   </div>
-                  <div className="s-latest__footer">
-                    <a className="btn btn_load "> Load more</a>
-                  </div>
-                </section>
-              </Col>
-
-              {/* ads right */}
-              <Col md="2" className="d-none d-md-block">
-                <div className="ads mt-5">
-                  <Link href="/">
-                    <a>
-                      <Image
-                        src="/home/event.png"
-                        alt="7Hit Logo"
-                        width={200}
-                        height={1500}
-                        layout="responsive"
-                        priority="true"
-                      />
-                    </a>
-                  </Link>
                 </div>
-              </Col>
-            </Row>
-
-            {/* ads footer */}
-            <Row className="mt-5">
-              <div className="ads">
-                <Link href="/">
-                  <a>
-                    <Image
-                      src="/home/event-bottom.png"
-                      alt="7Hit Logo"
-                      width={1500}
-                      height={200}
-                      layout="responsive"
-                      priority="true"
-                    />
-                  </a>
-                </Link>
               </div>
             </Row>
           </Container>
         </div>
       </section>
-
-      <Footer />
     </>
   );
 }
+
+export default Home;

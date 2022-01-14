@@ -53,6 +53,7 @@ $radius-collect: 25px;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
+  min-height: 100vh;
 
   .col_block--auth {
     h1 {

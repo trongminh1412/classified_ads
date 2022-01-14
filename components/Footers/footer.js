@@ -56,7 +56,7 @@ function footer(props) {
                 <div className="mb-auto mt-5">
                   <ul className="list-unstyled">
                     <li className="mb-4">
-                      <Link href="/">
+                      <Link href="/home">
                         <a>
                           <Image
                             src="/home/footer_social.svg"

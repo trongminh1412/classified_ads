@@ -47,7 +47,7 @@ function latest() {
                   />
                 </div>
                 <div className="card__item--sub-img">
-                  <Link href="/">
+                  <Link href="/home">
                     <a>
                       <Image
                         src="/home/popular/sub_img.svg"

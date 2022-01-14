@@ -70,7 +70,7 @@ export default function Success() {
                 <strong className="text-danger">7Hit.com </strong>
               </div>
               <Button className="bg-danger mt-5">
-                <Link href="/">Back to Homepage</Link>
+                <Link href="/home">Back to Homepage</Link>
               </Button>
             </Col>
             <Col className="col-5">
