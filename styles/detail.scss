@@ -1,0 +1,69 @@
+$bg-gray-color: #f8f8f8;
+$gray-color: #828282;
+$gray2-color: #f2f2f2;
+$gray3-color: #ced4da;
+
+$blue-color: #005cc8;
+$blue2-color: #2d9cdb;
+$green-color: #219653;
+$green2-color: #27ae60;
+
+$red-color: #e43226;
+$red2-color: #b02418;
+
+$orange-color: #f7971d;
+$aqua-color: #d8ffe6;
+$antique-color: #fff2e2;
+$thistle-color: #f0e5f5;
+$bisque-color: rgba(254, 131, 104, 0.15);
+$lightBlue-color: rgba(74, 191, 255, 0.15);
+
+$orange2-color: #f2994a;
+$orange3-color: #fe8368;
+$purple-color: #bb6bd9;
+$while-color: #f2f2f2;
+
+$bg-dark-color: #262626;
+$bg-shadow: rgba(0, 0, 0, 0.15);
+$bg2-shadow: rgba(86, 86, 86, 0.7);
+
+$radius: 10px;
+$radius-collect: 25px;
+
+.fs-10 {
+  font-size: 10px;
+}
+.fs-12 {
+  font-size: 12px;
+}
+.fs-14 {
+  font-size: 14px;
+}
+.svg-inline--fa {
+  display: inline-block;
+  font-size: inherit;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+
+//detail
+.s-main {
+  padding: 4rem 0 0.8rem 0;
+  .category_nav {
+    .category_nav--collapse {
+      box-shadow: 0px 1px 4px $bg-shadow;
+      border-radius: 4px;
+      padding: 5px;
+      margin-bottom: 10px;
+
+      .all_category {
+        border: 1px solid $red-color;
+        box-sizing: border-box;
+        border-radius: $radius;
+        color: $red-color;
+        font-size: 16px;
+      }
+    }
+  }
+}

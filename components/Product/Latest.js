@@ -5,8 +5,7 @@ import { AiOutlineFolder } from 'react-icons/ai';
 import { GoLocation } from 'react-icons/go';
 import { CgChevronDoubleRight } from 'react-icons/cg';
 import { VscBookmark } from 'react-icons/vsc';
-import { IconContext } from 'react-icons';
-import { Container, Row, Col, Input, Button, Card, CardBody } from 'reactstrap';
+import { Col, Card, CardBody } from 'reactstrap';
 
 export const data = [
   '/home/popular/1.svg',

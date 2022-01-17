@@ -1,19 +1,20 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import Popular from 'components/carousel/popular';
 import Footer from 'components/Footers/footer';
 import Latest from 'components/Product/Latest';
-import { Container, Row, Col, Input, Button, Card, CardBody } from 'reactstrap';
-import Navigation_index from 'components/Navigation/Navigation_index';
+import Navigation_detail from 'components/Navigation/Navigation_detail';
+import Category_detail from 'components/Product/Detail_category';
+import { BsFilter } from 'react-icons/bs';
+import { Container, Row, Col, FormGroup, Input, Label } from 'reactstrap';
 
 function detail(props) {
   return (
     <>
-      <Navigation_index />
+      <Navigation_detail />
 
       <section className="s-main">
-        <div className="s-main__content">
+        <div className="s-main_detail__content">
           <Container>
             {/* content */}
             <Row>
@@ -26,7 +27,7 @@ function detail(props) {
                         src="/home/detail_ads.png"
                         alt="7Hit Logo"
                         width={200}
-                        height={1500}
+                        height={1000}
                         layout="responsive"
                         priority="true"
                       />
@@ -37,14 +38,51 @@ function detail(props) {
 
               {/* category */}
               <Col md="2" className="d-none d-md-block">
-                <div className="ads">
+                <div className="category_nav">
+                  <div className="category_nav--collapse">
+                    <div className="all_category">
+                      <BsFilter />
+                      ALL CATEGORIES
+                    </div>
+                    <div>Electronics</div>
+                    <div>Electronics</div>
+                    <div>Electronics</div>
+                    <div>Electronics</div>
+                    <div>Electronics</div>
+                    <div>Electronics</div>
+                  </div>
+                  <div className="category_nav--filter">
+                    <div>Expanded Filters</div>
+                    <FormGroup check inline>
+                      <Input type="checkbox" />
+                      <Label check>Recommended</Label>
+                    </FormGroup>
+                    <FormGroup check inline>
+                      <Input type="checkbox" />
+                      <Label check>Recommended</Label>
+                    </FormGroup>
+                    <FormGroup check inline>
+                      <Input type="checkbox" />
+                      <Label check>Recommended</Label>
+                    </FormGroup>
+                    <FormGroup check inline>
+                      <Input type="checkbox" />
+                      <Label check>Recommended</Label>
+                    </FormGroup>
+                    <FormGroup check inline>
+                      <Input type="checkbox" />
+                      <Label check>Recommended</Label>
+                    </FormGroup>
+                  </div>
+                </div>
+                <div className="category_ads">
                   <Link href="/home">
                     <a>
                       <Image
                         src="/home/detail_ads_3.png"
                         alt="7Hit Logo"
                         width={200}
-                        height={1500}
+                        height={500}
                         layout="responsive"
                         priority="true"
                       />
@@ -55,6 +93,17 @@ function detail(props) {
 
               {/* content */}
               <Col md="6">
+                {/* top */}
+                <section className="s-category_detail">
+                  <Container>
+                    <div className="s-category_detail__content">
+                      <Row className="row-cols-lg-6 row-cols-md-3 row-cols-sm-2 row-cols-1">
+                        <Category_detail />
+                      </Row>
+                    </div>
+                  </Container>
+                </section>
+
                 {/* latest */}
                 <section className="s-latest">
                   <div className="s-latest__content">
@@ -81,7 +130,7 @@ function detail(props) {
                         src="/home/detail_ads.png"
                         alt="7Hit Logo"
                         width={200}
-                        height={1500}
+                        height={1000}
                         layout="responsive"
                         priority="true"
                       />

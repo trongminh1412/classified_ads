@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '/styles/home.scss';
 import '/styles/globals.scss';
 import '/styles/country.scss';
+import '/styles/detail.scss';
 import { Alert } from 'components/Alert/Alert';
 import { SessionProvider } from 'next-auth/react';
 

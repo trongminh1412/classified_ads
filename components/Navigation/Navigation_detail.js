@@ -5,14 +5,24 @@ import Image from 'next/image';
 import { userService } from 'services';
 import { FaRegUserCircle } from 'react-icons/fa';
 import { AiOutlinePlus } from 'react-icons/ai';
+import { BiCategory, BiSearchAlt2 } from 'react-icons/bi';
+import { MdOutlineShoppingBag } from 'react-icons/md';
 import Language_dropdown from 'components/Dropdown/Language';
-import { BiCategory } from 'react-icons/bi';
-import { Container, Navbar } from 'reactstrap';
+import {
+  Container,
+  Col,
+  Row,
+  Navbar,
+  Nav,
+  NavItem,
+  Button,
+  Input,
+} from 'reactstrap';
 
 import Popup from 'reactjs-popup';
 import Login from '../../pages/auth/login';
 
-const Navigation_index = () => {
+const Navigation_detail = () => {
   //sticky navbar
   const [isOpen, setIsOpen] = useState(false);
   const [sticky, setSticky] = useState(false);
@@ -109,19 +119,32 @@ const Navigation_index = () => {
               <div className="input-group align-items-center language_dropdown">
                 <Language_dropdown />
               </div>
-              <div className="input-group align-items-center input-search "></div>
+
+              <div className="input-group align-items-center input-search ">
+                <Button className="input-group-text" type="submit">
+                  <BiSearchAlt2 />
+                </Button>
+                <Input
+                  type="text"
+                  className="form-control form-search"
+                  placeholder="Search product name"
+                  aria-label="Search product name"
+                  aria-describedby="basic-addon"
+                />
+              </div>
 
               <div className="btn btn-create">
                 <AiOutlinePlus />
                 Create listing
               </div>
 
-              <div className="category">
+              <div className="category position-relative">
                 <Link href="/detail" passHref>
                   <h6>
-                    <BiCategory /> Browse Listings
+                    <MdOutlineShoppingBag className="fs-4" />
                   </h6>
                 </Link>
+                <span className="category_counter position-absolute">5</span>
               </div>
               <div className="d-none d-lg-none ml-3 mr-0">
                 <div className="nav-search-box">
@@ -176,4 +199,4 @@ export async function getServerSideProps(context) {
     },
   };
 }
-export default Navigation_index;
+export default Navigation_detail;
