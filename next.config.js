@@ -3,7 +3,7 @@ module.exports = {
   reactStrictMode: true,
   serverRuntimeConfig: {
     mySecret: 'secret',
-    secondSecret: process.env.NEXT_PUBLIC_SECOND_SECRET,
+    secondSecret: '66644c04-5a68-40a4-b130-7a970acb0093',
   },
   publicRuntimeConfig: {
     apiUrl:
