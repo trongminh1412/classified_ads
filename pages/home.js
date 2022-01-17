@@ -3,8 +3,8 @@ import Link from 'next/link';
 import Navigation from 'components/Navigation/Navigation_index';
 import Popular from 'components/carousel/popular';
 import Footer from 'components/Footers/footer';
-import Latest from 'components/Home_product/Latest';
-import Category from 'components/Home_product/Category';
+import Latest from 'components/Product/Latest';
+import Category from 'components/Product/Category';
 import { BiSearchAlt2 } from 'react-icons/bi';
 import { Container, Row, Col, Input, Button, Card, CardBody } from 'reactstrap';
 export default function Home() {
@@ -42,7 +42,6 @@ export default function Home() {
                     className="form-control form-search-left"
                     placeholder="What?"
                     aria-label="Search"
-                    aria-describedby="basic-addon"
                   />
                   <div className="border_center"></div>
                 </div>
@@ -62,7 +61,6 @@ export default function Home() {
                     className="form-control form-search-right"
                     placeholder="Where?"
                     aria-label="Search"
-                    aria-describedby="basic-addon"
                   />
                 </div>
                 <Button className="input-group-text" type="submit">
@@ -151,7 +149,9 @@ export default function Home() {
                         </h6>
                       </div>
                       <div className="s-latest__content__body">
-                        <Latest />
+                        <Row className="row-cols-xl-5 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1">
+                          <Latest />
+                        </Row>
                       </div>
                     </Container>
                   </div>
