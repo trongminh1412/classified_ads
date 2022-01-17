@@ -229,21 +229,10 @@ $radius-collect: 25px;
       }
     }
 
-    .btn-create {
-      background-color: $red-color;
-      border-radius: $radius;
-      color: $while-color;
-      padding: 10px;
-      line-height: 1;
-
-      cursor: pointer;
-      &:hover {
-        background-color: $red-color;
-        color: $gray2-color;
-      }
-
-      &::after {
-        font-size: 0;
+    .category {
+      h6 {
+        cursor: pointer;
+        margin-bottom: 0;
       }
     }
 
@@ -506,6 +495,25 @@ $radius-collect: 25px;
   color: $while-color;
 }
 
+//button
+.btn-create {
+  background-color: $red-color;
+  border-radius: $radius;
+  color: $while-color;
+  padding: 10px;
+  line-height: 1;
+
+  cursor: pointer;
+  &:hover {
+    background-color: $red-color;
+    color: $gray2-color;
+  }
+
+  &::after {
+    font-size: 0;
+  }
+}
+
 //alert
 .alert__style {
   position: absolute;
@@ -531,4 +539,11 @@ $radius-collect: 25px;
   > div {
     height: 100%;
   }
+}
+
+//s-footer
+.s-footer {
+  background-color: $bg-gray-color;
+  text-align: center;
+  justify-content: center;
 }

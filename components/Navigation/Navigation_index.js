@@ -93,9 +93,6 @@ const Navigation_index = () => {
 
   return (
     <>
-      {/* <Popup trigger={<button> Trigger</button>} position="right center">
-        <Login />
-      </Popup> */}
       <div
         className={`header bg-light shadow-sm p-2 bg-body rounded${
           sticky ? ' sticky-top ' : ''
@@ -119,11 +116,16 @@ const Navigation_index = () => {
               </div>
 
               <div className="btn btn-create">
-                <AiOutlinePlus /> Create listing
+                <AiOutlinePlus />
+                Create listing
               </div>
 
               <div className="category">
-                <BiCategory /> Browse Listings
+                <Link href="/detail" passHref>
+                  <h6>
+                    <BiCategory /> Browse Listings
+                  </h6>
+                </Link>
               </div>
               <div className="d-none d-lg-none ml-3 mr-0">
                 <div className="nav-search-box">
@@ -154,11 +156,10 @@ const Navigation_index = () => {
                       trigger={
                         <h6 className="m-0" style={{ cursor: 'pointer' }}>
                           {' '}
-                          Log in{' '}
+                          Log in
                         </h6>
                       }
                     >
-                      {' '}
                       <Login />
                     </Popup>
                   )}
