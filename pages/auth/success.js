@@ -23,7 +23,7 @@ import {
 export default function Success() {
   return (
     <>
-      <div className="bg-background-auth">
+      <div className="bg-background-auth bg-light">
         <Container className="py-5">
           <div className="text-center pb-5">
             <h1 className="fw-bold">Verify Your Email</h1>
