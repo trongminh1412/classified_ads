@@ -8,7 +8,7 @@ export const fetchWrapper = {
   get,
   post,
   put,
-  // delete: _delete,
+  delete: _delete,
 };
 
 function get(url) {
@@ -38,14 +38,14 @@ function put(url, body) {
   return fetch(url, requestOptions).then(handleResponse);
 }
 
-// // prefixed with underscored because delete is a reserved word in javascript
-// function _delete(url) {
-//   const requestOptions = {
-//     method: "DELETE",
-//     headers: authHeader(url),
-//   };
-//   return fetch(url, requestOptions).then(handleResponse);
-// }
+// prefixed with underscored because delete is a reserved word in javascript
+function _delete(url) {
+  const requestOptions = {
+    method: 'DELETE',
+    headers: authHeader(url),
+  };
+  return fetch(url, requestOptions).then(handleResponse);
+}
 
 // helper functions
 
