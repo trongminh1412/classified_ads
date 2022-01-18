@@ -5,6 +5,7 @@ import '/styles/home.scss';
 import '/styles/globals.scss';
 import '/styles/country.scss';
 import '/styles/detail.scss';
+import '/styles/accordion.scss';
 import { Alert } from 'components/Alert/Alert';
 import { SessionProvider } from 'next-auth/react';
 
@@ -20,10 +21,10 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" type="image/png" href="/favicon.png"></link>
         <title> 7Hit | Classified Ads</title>
       </Head>
-      <div>
+      <React.StrictMode>
         <Alert />
         <Component {...pageProps} />
-      </div>
+      </React.StrictMode>
     </>
   );
 }

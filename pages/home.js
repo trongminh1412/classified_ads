@@ -117,7 +117,7 @@ export default function Home() {
                 </section>
 
                 {/* category */}
-                <section className="s-category">
+                <section className="s-category py-4">
                   <Container>
                     <div className="s-category__content">
                       <div className="s-category__content--title d-flex flex-wrap align-items-center">
@@ -130,7 +130,9 @@ export default function Home() {
                         </h6>
                       </div>
                       <div className="s-category__content__body">
-                        <Category />
+                        <Row className="row-cols-xl-6 row-cols-lg-4 row-cols-md-3 row-cols-sm-3 pt-4">
+                          <Category />
+                        </Row>
                       </div>
                     </div>
                   </Container>
