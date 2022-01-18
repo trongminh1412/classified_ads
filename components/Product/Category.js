@@ -43,26 +43,24 @@ const imageCategory = ({ src, width, quality }) => {
 function category() {
   return (
     <>
-      <Row>
-        {data.src.map((src, index) => (
-          <Col xl="2" lg="3" md="4" sm="6" className="pt-4" key={index}>
-            <div className="product">
-              <div className="product_spin">
-                <Image
-                  loader={imageCategory}
-                  src={src}
-                  alt="7Hit Logo"
-                  width={60}
-                  height={60}
-                  layout="intrinsic"
-                  priority="true"
-                />
-              </div>
-              <h6>{data.title[index]}</h6>
+      {data.src.map((src, index) => (
+        <Col key={index}>
+          <div className="product">
+            <div className="product_spin">
+              <Image
+                loader={imageCategory}
+                src={src}
+                alt="7Hit Logo"
+                width={60}
+                height={60}
+                layout="intrinsic"
+                priority="true"
+              />
             </div>
-          </Col>
-        ))}
-      </Row>
+            <h6>{data.title[index]}</h6>
+          </div>
+        </Col>
+      ))}
     </>
   );
 }
