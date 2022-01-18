@@ -61,9 +61,11 @@ $radius-collect: 25px;
         .all_category {
           border: 1px solid $red-color;
           box-sizing: border-box;
-          border-radius: 7px;
+          border-radius: $radius;
           color: $red-color;
           font-size: 16px;
+          padding: 5px;
+          text-align: center;
         }
       }
 

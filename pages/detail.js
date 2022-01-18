@@ -10,19 +10,7 @@ import Accordion from 'components/Accordion/Accordion';
 import Sort from 'components/Dropdown/Sort';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import {
-  Container,
-  Row,
-  Col,
-  FormGroup,
-  Input,
-  Label,
-  Nav,
-  NavItem,
-  NavLink,
-  TabContent,
-  TabPane,
-} from 'reactstrap';
+import { Container, Row, Col, FormGroup, Input, Label } from 'reactstrap';
 
 function Detail(props) {
   const innerRef = React.useRef(null);
@@ -30,36 +18,31 @@ function Detail(props) {
     <>
       <Navigation_detail />
 
-      <section className="s-main">
+      <section className="s-main d-flex justify-content-center">
+        {/* ads left */}
+        <div className="d-none d-lg-block">
+          <div className="ads">
+            <Link href="/home">
+              <a>
+                <Image
+                  src="/home/detail_ads.png"
+                  alt="7Hit Logo"
+                  width={120}
+                  height={1000}
+                  layout="intrinsic"
+                  priority="true"
+                />
+              </a>
+            </Link>
+          </div>
+        </div>
+
         <div className="s-main_detail__content">
           <Container className="fluid">
             {/* content */}
             <Row>
-              {/* ads left */}
-              <Col md="2" className="d-none d-lg-block">
-                <div className="ads">
-                  <Link href="/home">
-                    <a>
-                      <Image
-                        src="/home/detail_ads.png"
-                        alt="7Hit Logo"
-                        width={200}
-                        height={1000}
-                        layout="responsive"
-                        priority="true"
-                      />
-                    </a>
-                  </Link>
-                </div>
-              </Col>
-
               {/* category */}
-              <Col
-                md="4"
-                lg="3"
-                xl="2"
-                className="d-none d-md-block category_nav"
-              >
+              <Col md="4" lg="3" className="d-none d-md-block category_nav">
                 <div className="mb-3">
                   <div className="category_nav--collapse mb-3">
                     <div className="all_category">
@@ -149,12 +132,12 @@ function Detail(props) {
               </Col>
 
               {/* content */}
-              <Col md="8" lg="5" xl="6">
+              <Col md="8" lg="9">
                 {/* top */}
                 <div className="s-category">
                   <div className="s-category__content">
                     <div className="s-category__content__body">
-                      <Row className="row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-3 pt-4">
+                      <Row className="row-cols-xl-6 row-cols-lg-4 row-cols-md-3 row-cols-sm-3 pt-4">
                         <Category />
                       </Row>
                     </div>
@@ -191,24 +174,6 @@ function Detail(props) {
                   </div>
                 </div>
               </Col>
-
-              {/* ads right */}
-              <Col md="2" className="d-none d-lg-block">
-                <div className="ads">
-                  <Link href="/home">
-                    <a>
-                      <Image
-                        src="/home/detail_ads.png"
-                        alt="7Hit Logo"
-                        width={200}
-                        height={1000}
-                        layout="responsive"
-                        priority="true"
-                      />
-                    </a>
-                  </Link>
-                </div>
-              </Col>
             </Row>
 
             {/* ads footer */}
@@ -231,6 +196,24 @@ function Detail(props) {
               </Col>
             </Row>
           </Container>
+        </div>
+
+        {/* ads right */}
+        <div className="d-none d-lg-block">
+          <div className="ads">
+            <Link href="/home">
+              <a>
+                <Image
+                  src="/home/detail_ads.png"
+                  alt="7Hit Logo"
+                  width={120}
+                  height={1000}
+                  layout="intrinsic"
+                  priority="true"
+                />
+              </a>
+            </Link>
+          </div>
         </div>
       </section>
 
