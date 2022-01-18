@@ -21,7 +21,6 @@ $lightBlue-color: rgba(74, 191, 255, 0.15);
 $orange2-color: #f2994a;
 $orange3-color: #fe8368;
 $purple-color: #bb6bd9;
-$while-color: #f2f2f2;
 
 $bg-dark-color: #262626;
 $bg-shadow: rgba(0, 0, 0, 0.15);
@@ -47,6 +46,11 @@ $radius-collect: 25px;
   vertical-align: -0.125em;
 }
 
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
 //**auth**//
 .bg-background-auth {
   background-color: $bg2-shadow;
@@ -157,8 +161,8 @@ $radius-collect: 25px;
       }
 
       button.submit {
-        background-color: $while-color;
-        border-color: $while-color;
+        background-color: $gray2-color;
+        border-color: $gray2-color;
 
         &:hover {
           background-color: $red-color;
@@ -287,7 +291,7 @@ $radius-collect: 25px;
         right: -10px;
         background-color: $red-color;
         border-radius: 100%;
-        color: $while-color;
+        color: $gray2-color;
         padding: 3px;
         display: -ms-inline-flexbox;
         display: inline-flex;
@@ -462,8 +466,6 @@ $radius-collect: 25px;
 
   //category
   .s-category {
-    padding: 2rem 0;
-
     .s-category__content {
       padding: 1rem;
       background: white;
@@ -557,14 +559,14 @@ $radius-collect: 25px;
 //footer
 .footer-widget {
   background: $bg-dark-color;
-  color: $while-color;
+  color: $gray2-color;
 }
 
 //button
 .btn-create {
   background-color: $red-color;
   border-radius: $radius;
-  color: $while-color;
+  color: $gray2-color;
   padding: 10px;
   line-height: 1;
 

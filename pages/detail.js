@@ -1,25 +1,42 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Footer from 'components/Footers/footer';
 import Latest from 'components/Product/Latest';
 import Navigation_detail from 'components/Navigation/Navigation_detail';
-import Category_detail from 'components/Product/Detail_category';
+import Category from 'components/Product/Category';
 import { BsFilter } from 'react-icons/bs';
-import { Container, Row, Col, FormGroup, Input, Label } from 'reactstrap';
+import Accordion from 'components/Accordion/Accordion';
+import Sort from 'components/Dropdown/Sort';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
+import {
+  Container,
+  Row,
+  Col,
+  FormGroup,
+  Input,
+  Label,
+  Nav,
+  NavItem,
+  NavLink,
+  TabContent,
+  TabPane,
+} from 'reactstrap';
 
-function detail(props) {
+function Detail(props) {
+  const innerRef = React.useRef(null);
   return (
     <>
       <Navigation_detail />
 
       <section className="s-main">
         <div className="s-main_detail__content">
-          <Container>
+          <Container className="fluid">
             {/* content */}
             <Row>
               {/* ads left */}
-              <Col md="2" className="d-none d-md-block">
+              <Col md="2" className="d-none d-lg-block">
                 <div className="ads">
                   <Link href="/home">
                     <a>
@@ -37,22 +54,62 @@ function detail(props) {
               </Col>
 
               {/* category */}
-              <Col md="2" className="d-none d-md-block">
-                <div className="category_nav">
-                  <div className="category_nav--collapse">
+              <Col
+                md="4"
+                lg="3"
+                xl="2"
+                className="d-none d-md-block category_nav"
+              >
+                <div className="mb-3">
+                  <div className="category_nav--collapse mb-3">
                     <div className="all_category">
                       <BsFilter />
                       ALL CATEGORIES
                     </div>
-                    <div>Electronics</div>
-                    <div>Electronics</div>
-                    <div>Electronics</div>
-                    <div>Electronics</div>
-                    <div>Electronics</div>
-                    <div>Electronics</div>
+                    <div className="all_category-content">
+                      <Accordion
+                        title="Electronics"
+                        content="
+                              <div> Cell Phone Accessories</div>
+                              <div> Cell Phone Gatgets</div>
+                              <div> Applications</div>
+                              <div> Smart Watches</div>
+                              "
+                      />
+                      <Accordion
+                        title="Business & Industrial"
+                        content="
+                              <div> Business & Industrial</div>
+                              "
+                      />
+                      <Accordion
+                        title="Computers"
+                        content="
+                              <div> Computers</div>
+                              "
+                      />
+                      <Accordion
+                        title="Consumer Electroinics"
+                        content="
+                              <div> Consumer Electroinics</div>
+                              "
+                      />
+                      <Accordion
+                        title="Home & Garden"
+                        content="
+                              <div> Home & Garden</div>
+                              "
+                      />
+                      <Accordion
+                        title="Collectibles"
+                        content="
+                              <div> Collectibles</div>
+                              "
+                      />
+                    </div>
                   </div>
                   <div className="category_nav--filter">
-                    <div>Expanded Filters</div>
+                    <div className="fw-bold pb-3">Expanded Filters</div>
                     <FormGroup check inline>
                       <Input type="checkbox" />
                       <Label check>Recommended</Label>
@@ -92,37 +149,51 @@ function detail(props) {
               </Col>
 
               {/* content */}
-              <Col md="6">
+              <Col md="8" lg="5" xl="6">
                 {/* top */}
-                <section className="s-category_detail">
-                  <Container>
-                    <div className="s-category_detail__content">
-                      <Row className="row-cols-lg-6 row-cols-md-3 row-cols-sm-2 row-cols-1">
-                        <Category_detail />
+                <div className="s-category">
+                  <div className="s-category__content">
+                    <div className="s-category__content__body">
+                      <Row className="row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-3 pt-4">
+                        <Category />
                       </Row>
                     </div>
-                  </Container>
-                </section>
+                  </div>
+                </div>
 
                 {/* latest */}
-                <section className="s-latest">
+
+                <div className="s-latest">
                   <div className="s-latest__content">
-                    <Container>
-                      <div className="s-latest__content__body">
-                        <Row className="row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1">
-                          <Latest />
-                        </Row>
-                      </div>
-                    </Container>
+                    <div className="s-latest__content__body">
+                      <Tabs>
+                        <TabList>
+                          <Tab>All listing</Tab>
+                          <Tab>Latest listing</Tab>
+                          <div className="filter">
+                            <Sort />
+                          </div>
+                        </TabList>
+
+                        <TabPanel>
+                          <Row className="row-cols-xl-4 row-cols-lg-3 row-cols-md-3 row-cols-sm-2 row-cols-2">
+                            <Latest />
+                          </Row>
+                        </TabPanel>
+                        <TabPanel>
+                          <h2>latest listing</h2>
+                        </TabPanel>
+                      </Tabs>
+                    </div>
                   </div>
                   <div className="s-latest__footer">
                     <a className="btn btn_load "> Load more</a>
                   </div>
-                </section>
+                </div>
               </Col>
 
               {/* ads right */}
-              <Col md="2" className="d-none d-md-block">
+              <Col md="2" className="d-none d-lg-block">
                 <div className="ads">
                   <Link href="/home">
                     <a>
@@ -182,4 +253,4 @@ function detail(props) {
   );
 }
 
-export default detail;
+export default Detail;
