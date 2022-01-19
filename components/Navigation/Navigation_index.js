@@ -117,7 +117,7 @@ const Navigation_index = () => {
               </div>
 
               <div className="category">
-                <Link href="/detail" passHref>
+                <Link href="/categoryDetail" passHref>
                   <h6>
                     <BiCategory /> Browse Listings
                   </h6>

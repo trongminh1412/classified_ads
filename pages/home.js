@@ -98,7 +98,7 @@ export default function Home() {
               {/* content */}
               <Col md="8">
                 {/* popular */}
-                <section className="s-popular">
+                <div className="s-popular">
                   <div className="s-popular__content">
                     <Container>
                       <div className="s-popular__content--title d-flex flex-wrap align-items-center">
@@ -114,10 +114,10 @@ export default function Home() {
                       </div>
                     </Container>
                   </div>
-                </section>
+                </div>
 
                 {/* category */}
-                <section className="s-category py-4">
+                <div className="s-category py-4">
                   <Container>
                     <div className="s-category__content">
                       <div className="s-category__content--title d-flex flex-wrap align-items-center">
@@ -136,10 +136,10 @@ export default function Home() {
                       </div>
                     </div>
                   </Container>
-                </section>
+                </div>
 
                 {/* latest */}
-                <section className="s-latest">
+                <div className="s-latest">
                   <div className="s-latest__content">
                     <Container>
                       <div className="s-latest__content--title d-flex flex-wrap align-items-center">
@@ -160,7 +160,7 @@ export default function Home() {
                   <div className="s-latest__footer">
                     <a className="btn btn_load "> Load more</a>
                   </div>
-                </section>
+                </div>
               </Col>
 
               {/* ads right */}
