@@ -33,34 +33,36 @@ function latest() {
         <Col className="py-2" key={index}>
           <div className="card__item">
             <Card>
-              <div>
+              <Link href="/productDetail" passHref>
+                <a>
+                  <Image
+                    loader={imageLatest}
+                    src={id}
+                    alt="collection kids"
+                    layout="responsive"
+                    width={154}
+                    height={154}
+                    priority="true"
+                  />
+                </a>
+              </Link>
+              <div className="card__item--sub-img">
                 <Image
-                  loader={imageLatest}
-                  src={id}
+                  src="/home/popular/sub_img.svg"
                   alt="collection kids"
-                  layout="responsive"
-                  width={154}
-                  height={154}
+                  layout="intrinsic"
+                  width={12}
+                  height={12}
                   priority="true"
                 />
-              </div>
-              <div className="card__item--sub-img">
-                <Link href="/home">
-                  <a>
-                    <Image
-                      src="/home/popular/sub_img.svg"
-                      alt="collection kids"
-                      layout="intrinsic"
-                      width={12}
-                      height={12}
-                      priority="true"
-                    />
-                  </a>
-                </Link>
                 <span className="ps-1">5</span>
               </div>
               <CardBody className="text-start px-2">
-                <h6 className="fs-14 fw-bold py-1">Iphone 12 white color</h6>
+                <h6 className="fs-14 fw-bold py-1text-reset">
+                  <Link href="/productDetail">
+                    <a className="text-reset">Iphone 12 white color</a>
+                  </Link>
+                </h6>
                 <div className="fs-10 py-1">
                   <BsClock /> 13h hours ago
                 </div>

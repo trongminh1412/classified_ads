@@ -128,4 +128,70 @@ $radius-collect: 25px;
       }
     }
   }
+
+  .product_detail {
+    .product_detail--content {
+      margin-bottom: 3rem;
+
+      .content_info {
+        box-shadow: 0px 1px 4px $bg-shadow;
+        border-radius: 7px;
+        padding: 2rem;
+
+        .content_info--contact {
+          .btn-create {
+            width: 80%;
+            text-align: center;
+          }
+        }
+
+        .content_info--pay {
+          .pay_title {
+            border: 1px solid #f5f2f2;
+            background-color: #f5f2f2;
+            border-radius: 7px;
+            align-items: center;
+            align-self: center;
+            margin-bottom: 1.2rem;
+            padding: 10px;
+          }
+        }
+      }
+    }
+
+    .product_detail--tab {
+      margin-bottom: 3rem;
+
+      .react-tabs__tab-list {
+        border-color: $gray3-color;
+        margin-bottom: 0;
+
+        .react-tabs__tab {
+          border-color: $gray3-color;
+        }
+      }
+
+      .react-tabs__tab-panel {
+        border: 1px solid $gray3-color;
+        border-top: 0;
+
+        .tab_content--title {
+          border-bottom: 1px solid $gray3-color;
+        }
+
+        .tab_content--detail {
+          .tab_content--detail_left,
+          .tab_content--detail_right {
+            border: 1px solid $gray2-color;
+            background-color: $gray2-color;
+            padding: 5px;
+          }
+        }
+
+        .tab_content--footer {
+          border-top: 1px solid $gray3-color;
+        }
+      }
+    }
+  }
 }

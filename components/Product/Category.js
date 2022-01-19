@@ -43,8 +43,8 @@ const imageCategory = ({ src, width, quality }) => {
 function category() {
   return (
     <>
-      {data.src.map((src, index) => (
-        <Col key={index}>
+      {data.src.map((src, id) => (
+        <Col key={id}>
           <div className="product">
             <div className="product_spin">
               <Image
@@ -57,7 +57,7 @@ function category() {
                 priority="true"
               />
             </div>
-            <h6>{data.title[index]}</h6>
+            <h6>{data.title[id]}</h6>
           </div>
         </Col>
       ))}

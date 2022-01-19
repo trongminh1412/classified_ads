@@ -136,7 +136,7 @@ const Navigation_detail = () => {
               <div className="btn btn-create">Create listing</div>
 
               <div className="category position-relative">
-                <Link href="/detail" passHref>
+                <Link href="/categoryDetail" passHref>
                   <h6>
                     <MdOutlineShoppingBag className="fs-4" />
                   </h6>
