@@ -178,22 +178,20 @@ function Detail(props) {
 
             {/* ads footer */}
             <Row className="mt-5 justify-content-center">
-              <Col md="8">
-                <div className="">
-                  <Link href="/home">
-                    <a>
-                      <Image
-                        src="/home/detail_ads_2.png"
-                        alt="7Hit Logo"
-                        width={1500}
-                        height={200}
-                        layout="responsive"
-                        priority="true"
-                      />
-                    </a>
-                  </Link>
-                </div>
-              </Col>
+              <div className="ads">
+                <Link href="/home">
+                  <a>
+                    <Image
+                      src="/home/detail_ads_2.png"
+                      alt="7Hit Logo"
+                      width={1500}
+                      height={200}
+                      layout="responsive"
+                      priority="true"
+                    />
+                  </a>
+                </Link>
+              </div>
             </Row>
           </Container>
         </div>
