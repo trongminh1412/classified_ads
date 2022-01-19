@@ -61,9 +61,11 @@ $radius-collect: 25px;
         .all_category {
           border: 1px solid $red-color;
           box-sizing: border-box;
-          border-radius: 7px;
+          border-radius: $radius;
           color: $red-color;
           font-size: 16px;
+          padding: 5px;
+          text-align: center;
         }
       }
 
@@ -78,46 +80,116 @@ $radius-collect: 25px;
     .s-latest {
       margin-top: 1.5rem;
 
-      .react-tabs__tab--selected {
-        border-color: $bg-gray-color;
-        bottom: 0;
-      }
-
-      .react-tabs__tab-panel {
+      .react-tabs {
         box-shadow: 0px 1px 2px $bg-shadow;
         border-bottom-left-radius: 4px;
         border-bottom-right-radius: 4px;
-        padding: 5px;
+
+        .react-tabs__tab--selected {
+          border-color: $bg-gray-color;
+          bottom: 0;
+          border-radius: 0;
+        }
+
+        .react-tabs__tab-panel {
+          padding: 5px;
+        }
+
+        .react-tabs__tab-list {
+          position: relative;
+          border-bottom: 0;
+          background-color: $gray2-color;
+
+          .filter {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translate(0, -50%);
+            padding: 5px;
+            background: #ffffff;
+            border: 1px solid #ededed;
+            box-sizing: border-box;
+            border-radius: $radius;
+            cursor: pointer;
+            z-index: 10;
+
+            .dropdown-toggle::after {
+              font-size: 0;
+            }
+
+            .dropdown-menu {
+              border-radius: 10px;
+              -webkit-filter: drop-shadow(0px 1px 8px rgba(0, 0, 0, 0.25));
+              filter: drop-shadow(0px 1px 8px rgba(0, 0, 0, 0.25));
+              border: none;
+            }
+          }
+        }
       }
+    }
+  }
+
+  .product_detail {
+    .product_detail--content {
+      margin-bottom: 3rem;
+
+      .content_info {
+        box-shadow: 0px 1px 4px $bg-shadow;
+        border-radius: 7px;
+        padding: 2rem;
+
+        .content_info--contact {
+          .btn-create {
+            width: 80%;
+            text-align: center;
+          }
+        }
+
+        .content_info--pay {
+          .pay_title {
+            border: 1px solid #f5f2f2;
+            background-color: #f5f2f2;
+            border-radius: 7px;
+            align-items: center;
+            align-self: center;
+            margin-bottom: 1.2rem;
+            padding: 10px;
+          }
+        }
+      }
+    }
+
+    .product_detail--tab {
+      margin-bottom: 3rem;
 
       .react-tabs__tab-list {
-        position: relative;
-        border-bottom: 0;
-        background-color: $gray2-color;
+        border-color: $gray3-color;
+        margin-bottom: 0;
 
-        .filter {
-          position: absolute;
-          top: 50%;
-          right: 10px;
-          transform: translate(0, -50%);
-          padding: 5px;
-          background: #ffffff;
-          border: 1px solid #ededed;
-          box-sizing: border-box;
-          border-radius: $radius;
-          cursor: pointer;
-          z-index: 10;
+        .react-tabs__tab {
+          border-color: $gray3-color;
+        }
+      }
 
-          .dropdown-toggle::after {
-            font-size: 0;
+      .react-tabs__tab-panel {
+        border: 1px solid $gray3-color;
+        border-top: 0;
+
+        .tab_content--title {
+          border-bottom: 1px solid $gray3-color;
+        }
+
+        .tab_content--detail {
+          .tab_content--detail_left,
+          .tab_content--detail_right {
+            border: 1px solid $gray2-color;
+            background-color: $gray2-color;
+            padding: 5px;
           }
+        }
 
-          .dropdown-menu {
-            border-radius: 10px;
-            -webkit-filter: drop-shadow(0px 1px 8px rgba(0, 0, 0, 0.25));
-            filter: drop-shadow(0px 1px 8px rgba(0, 0, 0, 0.25));
-            border: none;
-          }
+        .tab_content--footer {
+          border-top: 1px solid $gray3-color;
         }
       }
     }
