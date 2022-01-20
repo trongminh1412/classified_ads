@@ -117,11 +117,13 @@ const Navigation_index = () => {
               </div>
 
               <div className="category">
-                <Link href="/categoryDetail" passHref>
-                  <h6>
-                    <BiCategory /> Browse Listings
-                  </h6>
-                </Link>
+                <h6>
+                  <Link href="/detail" passHref>
+                    <a>
+                      <BiCategory /> Browse Listings
+                    </a>
+                  </Link>
+                </h6>
               </div>
               <div className="d-none d-lg-none ml-3 mr-0">
                 <div className="nav-search-box">
