@@ -61,11 +61,14 @@ function Product_detail() {
     <>
       <div className="product_detail">
         <Container>
+          {/* router */}
           <div className="product_detail--router">
             <h6 className="text-warning">
               Vietnam / Phones & Tablets / Mobile Phone / Hà Nội - iphone 6
             </h6>
           </div>
+
+          {/* title */}
           <div className="product_detail--title mt-5">
             <h1 className="fw-bold">Hà Nội - iphone 6</h1>
             <div className="d-flex">
@@ -87,6 +90,8 @@ function Product_detail() {
               </div>
             </div>
           </div>
+
+          {/* content */}
           <div className="product_detail--content">
             <Container>
               <Row>
@@ -97,7 +102,7 @@ function Product_detail() {
                         <div className="card__item" key={index}>
                           <div>
                             <Image
-                              loader={imageProduct}
+                              // loader={imageProduct}
                               src={id}
                               alt="collection kids"
                               layout="responsive"
@@ -159,45 +164,53 @@ function Product_detail() {
                         <MdOutlineEmail /> Send a message
                       </div>
                       <div className="contact_social d-flex justify-content-center my-2">
-                        <Link href="/face" passHref>
-                          <Image
-                            src="/product_detail/user.svg"
-                            alt="collection kids"
-                            layout="intrinsic"
-                            width={60}
-                            height={60}
-                            priority="true"
-                          />
+                        <Link href="/" passHref>
+                          <a>
+                            <Image
+                              src="/product_detail/user.svg"
+                              alt="collection kids"
+                              layout="intrinsic"
+                              width={60}
+                              height={60}
+                              priority="true"
+                            />
+                          </a>
                         </Link>
-                        <Link href="/face" passHref>
-                          <Image
-                            src="/product_detail/user.svg"
-                            alt="collection kids"
-                            layout="intrinsic"
-                            width={60}
-                            height={60}
-                            priority="true"
-                          />
+                        <Link href="/" passHref>
+                          <a>
+                            <Image
+                              src="/product_detail/user.svg"
+                              alt="collection kids"
+                              layout="intrinsic"
+                              width={60}
+                              height={60}
+                              priority="true"
+                            />
+                          </a>
                         </Link>
-                        <Link href="/face" passHref>
-                          <Image
-                            src="/product_detail/user.svg"
-                            alt="collection kids"
-                            layout="intrinsic"
-                            width={60}
-                            height={60}
-                            priority="true"
-                          />
+                        <Link href="/" passHref>
+                          <a>
+                            <Image
+                              src="/product_detail/user.svg"
+                              alt="collection kids"
+                              layout="intrinsic"
+                              width={60}
+                              height={60}
+                              priority="true"
+                            />
+                          </a>
                         </Link>
-                        <Link href="/face" passHref>
-                          <Image
-                            src="/product_detail/user.svg"
-                            alt="collection kids"
-                            layout="intrinsic"
-                            width={60}
-                            height={60}
-                            priority="true"
-                          />
+                        <Link href="/" passHref>
+                          <a>
+                            <Image
+                              src="/product_detail/user.svg"
+                              alt="collection kids"
+                              layout="intrinsic"
+                              width={60}
+                              height={60}
+                              priority="true"
+                            />
+                          </a>
                         </Link>
                       </div>
                     </div>
@@ -220,6 +233,8 @@ function Product_detail() {
               </Row>
             </Container>
           </div>
+
+          {/* similar listing */}
           <div className="product_detail--tab">
             <Tabs>
               <TabList>
@@ -231,7 +246,7 @@ function Product_detail() {
                   <div className="tab_content--title py-2 d-flex justify-content-between">
                     <div className="d-flex fs-14">
                       <GoLocation />
-                      <h6 className="ms-3 me-2 fs-14">Location</h6>{' '}
+                      <h6 className="ms-3 me-2 fs-14">Location</h6>
                       <h6 className="fs-14 fw-bold">Hà Đông</h6>
                     </div>
                     <h6 className="fs-14">
@@ -278,36 +293,42 @@ function Product_detail() {
                     </div>
                     <div className="tab_content--footer_right d-flex">
                       <div className="mx-1">
-                        <Link href="/productDetail" passHref>
-                          <Image
-                            src="/product_detail/email.svg"
-                            alt="email"
-                            width={40}
-                            height={40}
-                            layout="intrinsic"
-                          />
+                        <Link href="/listingDetail" passHref>
+                          <a>
+                            <Image
+                              src="/product_detail/email.svg"
+                              alt="email"
+                              width={40}
+                              height={40}
+                              layout="intrinsic"
+                            />
+                          </a>
                         </Link>
                       </div>
                       <div className="mx-1">
-                        <Link href="/productDetail" passHref>
-                          <Image
-                            src="/product_detail/bookmark.svg"
-                            alt="email"
-                            width={40}
-                            height={40}
-                            layout="intrinsic"
-                          />
+                        <Link href="/listingDetail" passHref>
+                          <a>
+                            <Image
+                              src="/product_detail/bookmark.svg"
+                              alt="email"
+                              width={40}
+                              height={40}
+                              layout="intrinsic"
+                            />
+                          </a>
                         </Link>
                       </div>
                       <div className="mx-1">
-                        <Link href="/productDetail" passHref>
-                          <Image
-                            src="/product_detail/flag.svg"
-                            alt="email"
-                            width={40}
-                            height={40}
-                            layout="intrinsic"
-                          />
+                        <Link href="/listingDetail" passHref>
+                          <a>
+                            <Image
+                              src="/product_detail/flag.svg"
+                              alt="email"
+                              width={40}
+                              height={40}
+                              layout="intrinsic"
+                            />
+                          </a>
                         </Link>
                       </div>
                     </div>

@@ -48,7 +48,7 @@ function category() {
           <div className="product">
             <div className="product_spin">
               <Image
-                loader={imageCategory}
+                // loader={imageCategory}
                 src={src}
                 alt="7Hit Logo"
                 width={60}

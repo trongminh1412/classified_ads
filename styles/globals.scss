@@ -1,5 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+$bg-gray-color: #f8f8f8;
+$gray-color: #828282;
+$gray2-color: #f2f2f2;
+$gray3-color: #ced4da;
+$while-color: #f2f2f2;
+
+$green-color: #219653;
+$green2-color: #27ae60;
+
+$red-color: #e43226;
+$bg-dark-color: #262626;
+$bg-shadow: rgba(0, 0, 0, 0.15);
+$bg2-shadow: rgba(86, 86, 86, 0.7);
+
+$radius: 10px;
+$radius-collect: 25px;
+
 html,
 body {
   padding: 0;
@@ -20,4 +37,146 @@ a {
   padding-top: 100px;
   padding-bottom: 100px;
   position: relative;
+}
+
+.fs-10 {
+  font-size: 10px;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.svg-inline--fa {
+  display: inline-block;
+  font-size: inherit;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+
+//button
+.btn-create {
+  background-color: $red-color;
+  border-radius: $radius;
+  color: $gray2-color;
+  padding: 10px;
+  line-height: 1;
+
+  cursor: pointer;
+  &:hover {
+    background-color: $red-color;
+    color: $gray2-color;
+  }
+
+  &::after {
+    font-size: 0;
+  }
+}
+
+//category
+.s-category {
+  .s-category__content {
+    padding: 1rem;
+    background: white;
+    box-shadow: 0px 2px 6px $bg-shadow;
+    border-radius: $radius;
+
+    .s-category__content__body {
+      .product {
+        text-align: -webkit-center;
+
+        .product_spin {
+          width: 98px;
+          height: 98px;
+          padding: 25px;
+          border-radius: 100%;
+
+          border: 1px solid $gray3-color;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+        }
+
+        h6 {
+          font-size: 14px;
+          font-weight: 600;
+          padding-top: 1rem;
+        }
+      }
+    }
+  }
+}
+
+//latest
+.s-latest {
+  margin-top: 1.5rem;
+  .s-latest__content__body {
+    .card__item {
+      .card {
+        box-shadow: 0px 2px 6px $bg-shadow;
+        border-radius: $radius;
+        border: 0;
+
+        img {
+          border-radius: $radius $radius 0 0;
+        }
+        .card__item--sub-img {
+          position: absolute;
+          right: 5%;
+          top: 3%;
+          padding: 0 4px;
+          background: #0c1a30;
+          color: $gray2-color;
+          border-radius: 4px;
+          opacity: 0.4;
+        }
+        .card-body {
+          > h6 {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+          .text_price {
+            h6 {
+              color: $green2-color;
+            }
+
+            .bookmark {
+              border: 1px solid #828282;
+              box-sizing: border-box;
+              border-radius: 4px;
+              padding: 0 3px;
+              opacity: 0.4;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .s-latest__footer {
+    padding-top: 2rem;
+    justify-content: center;
+    text-align: center;
+
+    a.btn_load {
+      background: $bg-gray-color;
+      border-radius: 10px;
+      border: 1px solid transparent;
+      color: $red-color;
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
