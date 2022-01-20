@@ -136,6 +136,11 @@ a {
           opacity: 0.4;
         }
         .card-body {
+          > h6 {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+          }
           .text_price {
             h6 {
               color: $green2-color;
