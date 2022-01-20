@@ -11,24 +11,80 @@ function footer(props) {
           <Row>
             <Col lg="3" md="6">
               <div className="text-center text-md-start">
-                <h4 className="text-uppercase fs-14 fw-bold mb-4">ABOUT US</h4>
+                <Link href="/home">
+                  <a>
+                    <Image
+                      src="/home/f-logo.svg"
+                      alt="banner"
+                      layout="fixed"
+                      width={202}
+                      height={60}
+                      priority="true"
+                    />
+                  </a>
+                </Link>
+              </div>
+              <div className="text-center text-md-start ms-3">
+                <h4 className="text-uppercase fs-14 fw-bold my-5">
+                  FOLLOW US ON
+                </h4>
+                <div className="mb-auto mt-5">
+                  <ul className="list-unstyled d-flex justify-content-center justify-content-md-start">
+                    <li className="pe-3">
+                      <Link href="/home">
+                        <a>
+                          <Image
+                            src="/home/f-facebook.svg"
+                            alt="banner"
+                            layout="intrinsic"
+                            width={24}
+                            height={24}
+                            priority="true"
+                          />
+                        </a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/home">
+                        <a>
+                          <Image
+                            src="/home/f-twitter.svg"
+                            alt="banner"
+                            layout="intrinsic"
+                            width={24}
+                            height={24}
+                            priority="true"
+                          />
+                        </a>
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </Col>
+            <Col lg="3" md="6">
+              <div className="text-center text-md-start">
+                <h4 className="text-uppercase fs-14 fw-bold mb-4">
+                  7HIT MARKETPLACE
+                </h4>
                 <ul className="list-unstyled">
-                  <li className="mb-3">FAQ</li>
-                  <li className="mb-3">Anti - Scam</li>
-                  <li className="mb-3">Terms</li>
+                  <li className="mb-3">About us</li>
+                  <li className="mb-3">Term of Use</li>
                   <li className="mb-3">Privacy</li>
+                  <li className="mb-3">FAQs</li>
                 </ul>
               </div>
             </Col>
             <Col lg="3" md="6">
               <div className="text-center text-md-start">
                 <h4 className="text-uppercase fs-14 fw-bold mb-4">
-                  CONTACT & SITEMAP
+                  SUPPORT CENTER
                 </h4>
                 <ul className="list-unstyled">
-                  <li className="mb-3">Contact Us</li>
-                  <li className="mb-3">Sitemap</li>
-                  <li className="mb-3">Countries</li>
+                  <li className="mb-3">Contact</li>
+                  <li className="mb-3">Safety</li>
+                  <li className="mb-3">Prohibited Items</li>
+                  <li className="mb-3">DMCA</li>
                 </ul>
               </div>
             </Col>
@@ -45,31 +101,6 @@ function footer(props) {
                     <Link href="/auth/register">Register</Link>
                   </li>
                 </ul>
-              </div>
-            </Col>
-            <Col lg="3" md="6">
-              <div className="text-center text-md-start">
-                <h4 className="text-uppercase fs-14 fw-bold mb-5">
-                  FOLLOW US ON
-                </h4>
-                <div className="mb-auto mt-5">
-                  <ul className="list-unstyled">
-                    <li className="mb-4">
-                      <Link href="/home">
-                        <a>
-                          <Image
-                            src="/home/footer_social.svg"
-                            alt="banner"
-                            layout="intrinsic"
-                            width={189}
-                            height={28}
-                            priority="true"
-                          />
-                        </a>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
               </div>
             </Col>
           </Row>
