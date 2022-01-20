@@ -106,6 +106,9 @@
       }
 
       .content_slider {
+        img {
+          border-radius: 7px;
+        }
         .slick-slider {
           .card__item > div {
             text-align: center;
