@@ -18,7 +18,7 @@ function Product(props) {
     <>
       <div className="card__item">
         <Card>
-          <Link href="/productDetail" passHref>
+          <Link href="/listingDetail" passHref>
             <a>
               <Image
                 loader={imageLatest}
@@ -44,27 +44,27 @@ function Product(props) {
           </div>
           <CardBody className="text-start px-2">
             <h6 className="fs-14 fw-bold py-1text-reset">
-              <Link href="/productDetail">
-                <a className="text-reset">Iphone 12 white color</a>
+              <Link href="/listingDetail">
+                <a className="text-reset">{props.title}</a>
               </Link>
             </h6>
             <div className="fs-10 py-1">
-              <BsClock /> 13h hours ago
+              <BsClock /> {props.time}
             </div>
             <div className="fs-10 py-1 d-flex">
               <AiOutlineFolder />
               <div className="ps-1">
-                Phone & Tablets
+                {props.type}
                 <span className="text-warning">
-                  <CgChevronDoubleRight /> Mobile phones
+                  <CgChevronDoubleRight /> {props.category}
                 </span>
               </div>
             </div>
             <div className="fs-10 py-1">
-              <GoLocation /> Ellsworth
+              <GoLocation /> {props.location}
             </div>
             <div className="d-flex justify-content-between align-items-center py-1 text_price">
-              <h6 className="mb-0">$49,192</h6>
+              <h6 className="mb-0">{props.price}</h6>
               <div className="bookmark">
                 <VscBookmark />
               </div>
