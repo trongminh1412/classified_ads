@@ -99,7 +99,7 @@ function popular(props) {
             <Card>
               <div>
                 <Image
-                  loader={imagePopular}
+                  // loader={imagePopular}
                   src={id}
                   alt="collection kids"
                   layout="responsive"

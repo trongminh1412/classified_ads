@@ -85,7 +85,7 @@ const Navigation_index = () => {
   return (
     <>
       <div
-        className={`header bg-light shadow-sm p-2 bg-body rounded${
+        className={`header bg-body shadow-sm p-2${
           sticky ? ' sticky-top ' : ''
         }`}
       >

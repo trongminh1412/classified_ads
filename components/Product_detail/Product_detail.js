@@ -102,7 +102,7 @@ function Product_detail() {
                         <div className="card__item" key={index}>
                           <div>
                             <Image
-                              loader={imageProduct}
+                              // loader={imageProduct}
                               src={id}
                               alt="collection kids"
                               layout="responsive"
