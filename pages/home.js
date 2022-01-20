@@ -3,10 +3,11 @@ import Link from 'next/link';
 import Navigation from 'components/Navigation/Navigation_index';
 import Popular from 'components/carousel/popular';
 import Footer from 'components/Footers/footer';
-import Latest from 'components/Product/Latest';
+import Latest_listing from 'components/Product/Latest_listing';
 import Category from 'components/Product/Category';
 import { BiSearchAlt2 } from 'react-icons/bi';
-import { Container, Row, Col, Input, Button, Card, CardBody } from 'reactstrap';
+import { Container, Row, Col, Input, Button } from 'reactstrap';
+
 export default function Home() {
   return (
     <>
@@ -147,12 +148,12 @@ export default function Home() {
                           <span className="fw-bold">Latest</span> Listings
                         </h4>
                         <h6 className="border-bottom border-dark ms-auto">
-                          View more
+                          <Link href="/detail">View more</Link>
                         </h6>
                       </div>
                       <div className="s-latest__content__body">
                         <Row className="row-cols-xl-5 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1">
-                          <Latest />
+                          <Latest_listing />
                         </Row>
                       </div>
                     </Container>

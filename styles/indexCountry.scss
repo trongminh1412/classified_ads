@@ -21,8 +21,8 @@ $gray_color: #a1a1a1;
   min-height: calc(100vh - 89px);
 
   .s-country__footer {
-    background: rgba(26, 26, 26, 0.65);
-    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.17);
+    background: rgba($black_color, 0.65);
+    box-shadow: 0px 4px 30px rgba($black_color, 0.17);
     backdrop-filter: blur(60px);
     margin-top: 5rem;
     border-radius: 20px;

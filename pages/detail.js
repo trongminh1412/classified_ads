@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Footer from 'components/Footers/footer';
-import Latest from 'components/Product/Latest';
+import Latest_listing from 'components/Product/Latest_listing';
 import Navigation_detail from 'components/Navigation/Navigation_detail';
 import Category from 'components/Product/Category';
 import { BsFilter } from 'react-icons/bs';
@@ -18,7 +18,7 @@ function Detail(props) {
     <>
       <Navigation_detail />
 
-      <section className="s-main d-flex justify-content-center">
+      <section className="s-detail d-flex justify-content-center">
         {/* ads left */}
         <div className="d-none d-lg-block">
           <div className="ads">
@@ -160,7 +160,7 @@ function Detail(props) {
 
                         <TabPanel>
                           <Row className="row-cols-xl-4 row-cols-lg-3 row-cols-md-3 row-cols-sm-2 row-cols-2">
-                            <Latest />
+                            <Latest_listing />
                           </Row>
                         </TabPanel>
                         <TabPanel>

@@ -95,7 +95,7 @@ const Navigation_detail = () => {
   return (
     <>
       <div
-        className={`header bg-light shadow-sm p-2 bg-body rounded${
+        className={`header bg-body shadow-sm p-2${
           sticky ? ' sticky-top ' : ''
         }`}
       >
@@ -136,7 +136,7 @@ const Navigation_detail = () => {
               <div className="btn btn-create">Create listing</div>
 
               <div className="category position-relative">
-                <Link href="/categoryDetail" passHref>
+                <Link href="/detail" passHref>
                   <h6>
                     <MdOutlineShoppingBag className="fs-4" />
                   </h6>

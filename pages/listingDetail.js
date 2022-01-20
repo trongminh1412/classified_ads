@@ -1,18 +1,16 @@
 import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
 import Footer from 'components/Footers/footer';
 import Navigation_detail from 'components/Navigation/Navigation_detail';
-import { Container, Row, Col, FormGroup, Input, Label } from 'reactstrap';
-import Latest from 'components/Product/Latest';
 import Product_detail from 'components/Product_detail/Product_detail';
+import Product_listing from 'components/Product/Product_listing';
+import { Container, Row } from 'reactstrap';
 
 function Detail(props) {
   return (
     <>
       <Navigation_detail />
 
-      <div className="s-main">
+      <div className="s-detail">
         {/* product detail */}
         <div className="s-product">
           <Product_detail />
@@ -28,7 +26,7 @@ function Detail(props) {
               </div>
               <div className="s-latest__content__body">
                 <Row className="row-cols-xl-5 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1">
-                  <Latest />
+                  <Product_listing />
                 </Row>
               </div>
             </Container>
