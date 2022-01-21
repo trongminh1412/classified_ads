@@ -12,6 +12,9 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import FormContact from 'components/Form/formContact';
+
+import Popup from 'reactjs-popup';
 
 function NextArrow(props) {
   const { className, style, onClick } = props;
@@ -51,12 +54,6 @@ export const data = [
   '/detail/4.svg',
   '/detail/5.svg',
 ];
-
-const imageProduct = ({ src, width, quality }) => {
-  return `${process.env.NEXT_PUBLIC_APP_URL}/${src}?1w=${width}&q=${
-    quality || 75
-  }`;
-};
 
 function Product_detail() {
   const settings = {
@@ -184,12 +181,24 @@ function Product_detail() {
                       <div className="btn-create mx-auto mb-2">
                         <MdPhoneIphone /> +84968638886
                       </div>
-                      <div
-                        className="btn-create mx-auto bg-light mb-4"
-                        style={{ color: 'red' }}
+
+                      <Popup
+                        trigger={
+                          <div
+                            className="btn-create mx-auto bg-light mb-4"
+                            style={{ color: 'red' }}
+                          >
+                            <MdOutlineEmail /> Send a message
+                          </div>
+                        }
+                        modal
+                        nested
                       >
-                        <MdOutlineEmail /> Send a message
-                      </div>
+                        {(close) => (
+                          <FormContact className="close" close={close} />
+                        )}
+                      </Popup>
+
                       <div className="contact_social d-flex justify-content-center my-2">
                         <Link href="/" passHref>
                           <a>
@@ -308,15 +317,25 @@ function Product_detail() {
                   </div>
                   <div className="tab_content--footer py-3 d-flex justify-content-between align-items-center">
                     <div className="tab_content--footer_left d-flex">
-                      <div className="btn-create me-2">
+                      <div className="btn-create mx-auto me-2">
                         <MdPhoneIphone /> +84968638886
                       </div>
-                      <div
-                        className="btn-create bg-light"
-                        style={{ color: 'red' }}
+                      <Popup
+                        trigger={
+                          <div
+                            className="btn-create bg-light"
+                            style={{ color: 'red' }}
+                          >
+                            <MdOutlineEmail /> Send a message
+                          </div>
+                        }
+                        modal
+                        nested
                       >
-                        <MdOutlineEmail /> Send a message
-                      </div>
+                        {(close) => (
+                          <FormContact className="close" close={close} />
+                        )}
+                      </Popup>
                     </div>
                     <div className="tab_content--footer_right d-flex">
                       <div className="mx-1">
