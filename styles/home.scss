@@ -20,20 +20,22 @@
 
     .col_block--card {
       border-radius: 6px;
-    }
+      position: relative;
 
-    .dropdown-toggle {
-      cursor: pointer;
-      &::after {
-        font-size: 0;
+      a.btn_close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1041;
+
+        &:hover {
+          opacity: 1;
+          background-color: #f3f4f6;
+        }
       }
     }
 
     Form {
-      .form-default--text {
-        text-align: right;
-      }
-
       .form-control {
         &.is-invalid {
           background-image: none;
@@ -50,6 +52,39 @@
         }
       }
 
+      i.icon-hidden {
+        position: absolute;
+        top: 38px;
+        right: 3%;
+
+        svg {
+          width: 19px;
+        }
+      }
+
+      input,
+      textarea {
+        border-radius: $radius;
+      }
+
+      button.submit {
+        border-radius: $radius;
+        background-color: $gray2-color;
+        border-color: $gray2-color;
+
+        &:hover {
+          background-color: $red-color;
+          border-color: $red-color;
+        }
+
+        &:focus {
+          background-color: $red-color;
+          border-color: $red-color;
+          box-shadow: none;
+        }
+      }
+
+      //register
       .change_language {
         display: inline-block;
         font-weight: 400;
@@ -69,30 +104,7 @@
         font-size: 1.5rem;
       }
 
-      .text-regist {
-        font-size: 12px;
-      }
-
-      i.icon-hidden {
-        position: absolute;
-        top: 38px;
-        right: 3%;
-
-        svg {
-          width: 19px;
-        }
-      }
-
-      input,
-      button.submit {
-        border-radius: 10px;
-      }
-
-      .input-group input {
-        border-top-right-radius: $radius !important;
-        border-bottom-right-radius: $radius !important;
-      }
-
+      //otp
       .otp input[type='text'] {
         width: 21% !important;
         height: 40px !important;
@@ -106,22 +118,6 @@
 
         &:focus-visible {
           outline: $gray-color;
-        }
-      }
-
-      button.submit {
-        background-color: $gray2-color;
-        border-color: $gray2-color;
-
-        &:hover {
-          background-color: $red-color;
-          border-color: $red-color;
-        }
-
-        &:focus {
-          background-color: $red-color;
-          border-color: $red-color;
-          box-shadow: none;
         }
       }
     }
@@ -426,16 +422,20 @@
 }
 
 //modal authentication
-.popup-content {
-  position: fixed !important;
-  width: 100%;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%);
-  z-index: 1030 !important;
-  height: 100%;
-  > div {
+.popup-overlay {
+  z-index: 1021 !important;
+
+  .popup-content {
+    position: fixed !important;
+    width: 100%;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+    z-index: 1030 !important;
     height: 100%;
+    > div {
+      height: 100%;
+    }
   }
 }
 

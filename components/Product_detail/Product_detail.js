@@ -12,23 +12,48 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import FormContact from 'components/Form/formContact';
 
+import Popup from 'reactjs-popup';
+
+function NextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div className={className} onClick={onClick}>
+      <Image
+        src="/home/nextArrow.svg"
+        alt="next"
+        layout="fixed"
+        width={60}
+        height={60}
+        priority="true"
+      />
+    </div>
+  );
+}
+
+function PrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div className={className} onClick={onClick}>
+      <Image
+        src="/home/prevArrow.svg"
+        alt="prev"
+        layout="fixed"
+        width={60}
+        height={60}
+        priority="true"
+      />
+    </div>
+  );
+}
 export const data = [
-  '/home/popular/1.svg',
-  '/home/popular/2.svg',
-  '/home/popular/1.svg',
-  '/home/popular/2.svg',
-  '/home/popular/1.svg',
-  '/home/popular/2.svg',
-  '/home/popular/1.svg',
-  '/home/popular/2.svg',
+  '/detail/1.svg',
+  '/detail/2.svg',
+  '/detail/3.svg',
+  '/detail/4.svg',
+  '/detail/5.svg',
 ];
-
-const imageProduct = ({ src, width, quality }) => {
-  return `${process.env.NEXT_PUBLIC_APP_URL}/${src}?1w=${width}&q=${
-    quality || 75
-  }`;
-};
 
 function Product_detail() {
   const settings = {
@@ -39,19 +64,19 @@ function Product_detail() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     customPaging: function (i) {
       return (
         <div>
-          {/* <Image
-            src={`${process.env.NEXT_PUBLIC_APP_URL}/${src}?w=${width}&q=${
-              quality || 75
-            }`}
+          <Image
+            // loader={imageProduct}
+            src={`/detail/${i + 1}.svg`}
             alt="collection kids"
-            layout="responsive"
-            width={154}
-            height={154}
-            priority="true"
-          /> */}
+            layout="intrinsic"
+            width={100}
+            height={100}
+          />
         </div>
       );
     },
@@ -95,7 +120,7 @@ function Product_detail() {
           <div className="product_detail--content">
             <Container>
               <Row>
-                <Col md="8">
+                <Col md="6" lg="7" xl="8">
                   <div className="content_slider">
                     <Slider {...settings}>
                       {data.map((id, index) => (
@@ -105,10 +130,9 @@ function Product_detail() {
                               // loader={imageProduct}
                               src={id}
                               alt="collection kids"
-                              layout="responsive"
-                              width={154}
-                              height={154}
-                              priority="true"
+                              layout="intrinsic"
+                              width={685}
+                              height={490}
                             />
                           </div>
                         </div>
@@ -117,9 +141,9 @@ function Product_detail() {
                   </div>
                 </Col>
 
-                <Col md="4">
+                <Col md="6" lg="5" xl="4">
                   <div className="content_info">
-                    <div className="content_info--title mb-5">
+                    <div className="content_info--title mb-4">
                       <Row>
                         <Col sm="4">
                           <div className="info_img text-center">
@@ -153,16 +177,28 @@ function Product_detail() {
                       </div>
                       <h6 className="fs-14 fw-bold">Dec 23rd, 2021 at 20:40</h6>
                     </div>
-                    <div className="content_info--contact my-5">
+                    <div className="content_info--contact my-4">
                       <div className="btn-create mx-auto mb-2">
                         <MdPhoneIphone /> +84968638886
                       </div>
-                      <div
-                        className="btn-create mx-auto bg-light mb-4"
-                        style={{ color: 'red' }}
+
+                      <Popup
+                        trigger={
+                          <div
+                            className="btn-create mx-auto bg-light mb-4"
+                            style={{ color: 'red' }}
+                          >
+                            <MdOutlineEmail /> Send a message
+                          </div>
+                        }
+                        modal
+                        nested
                       >
-                        <MdOutlineEmail /> Send a message
-                      </div>
+                        {(close) => (
+                          <FormContact className="close" close={close} />
+                        )}
+                      </Popup>
+
                       <div className="contact_social d-flex justify-content-center my-2">
                         <Link href="/" passHref>
                           <a>
@@ -281,15 +317,25 @@ function Product_detail() {
                   </div>
                   <div className="tab_content--footer py-3 d-flex justify-content-between align-items-center">
                     <div className="tab_content--footer_left d-flex">
-                      <div className="btn-create me-2">
+                      <div className="btn-create mx-auto me-2">
                         <MdPhoneIphone /> +84968638886
                       </div>
-                      <div
-                        className="btn-create bg-light"
-                        style={{ color: 'red' }}
+                      <Popup
+                        trigger={
+                          <div
+                            className="btn-create bg-light"
+                            style={{ color: 'red' }}
+                          >
+                            <MdOutlineEmail /> Send a message
+                          </div>
+                        }
+                        modal
+                        nested
                       >
-                        <MdOutlineEmail /> Send a message
-                      </div>
+                        {(close) => (
+                          <FormContact className="close" close={close} />
+                        )}
+                      </Popup>
                     </div>
                     <div className="tab_content--footer_right d-flex">
                       <div className="mx-1">

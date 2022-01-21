@@ -175,8 +175,10 @@ const Navigation_detail = () => {
                           Log in
                         </h6>
                       }
+                      modal
+                      nested
                     >
-                      <Login />
+                      {(close) => <Login className="close" close={close} />}
                     </Popup>
                   )}
                 </div>
