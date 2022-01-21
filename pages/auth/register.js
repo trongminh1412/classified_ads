@@ -213,7 +213,7 @@ export default function Register() {
                             }`}
                           />
                           <div className="col-11 d-inline-flex">
-                            <span className="opacity-60 float-end text-regist">
+                            <span className="opacity-60 float-end fs-12">
                               By confirming this account, you agree to{' '}
                               <strong className="text-danger">7Hit.com </strong>
                               about{' '}
