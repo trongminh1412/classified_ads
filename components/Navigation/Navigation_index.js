@@ -125,6 +125,7 @@ const Navigation_index = () => {
                   </Link>
                 </h6>
               </div>
+
               <div className="d-none d-lg-none ml-3 mr-0">
                 <div className="nav-search-box">
                   <a href="#" className="nav-box-link">
@@ -150,16 +151,20 @@ const Navigation_index = () => {
                       </h6>
                     </>
                   ) : (
-                    <Popup
-                      trigger={
-                        <h6 className="m-0" style={{ cursor: 'pointer' }}>
-                          {' '}
-                          Log in
-                        </h6>
-                      }
-                    >
-                      <Login />
-                    </Popup>
+                    <>
+                      <Popup
+                        trigger={
+                          <h6 className="m-0" style={{ cursor: 'pointer' }}>
+                            {' '}
+                            Log in
+                          </h6>
+                        }
+                        modal
+                        nested
+                      >
+                        {(close) => <Login className="close" close={close} />}
+                      </Popup>
+                    </>
                   )}
                 </div>
               </div>

@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 import { Layout } from 'components/Account/Layout';
-import { AiOutlineEye } from 'react-icons/ai';
+import { AiOutlineEye, AiOutlineClose } from 'react-icons/ai';
 import { userService, alertService } from 'services';
 import axios from 'axios';
 import {
@@ -31,7 +31,7 @@ import {
   Button,
 } from 'reactstrap';
 
-export default function Login() {
+export default function Login({ close }) {
   // form valid
   const validationSchema = Yup.object().shape({
     email: Yup.string()
@@ -72,7 +72,10 @@ export default function Login() {
           <Container className="py-5">
             <Row>
               <Col className="col-xl-4 col-lg-5 col-md-7 col-sm-9 mx-auto col_block--auth">
-                <Card className="col_block--card p-2">
+                <Card className="col_block--card p-2 position-relative">
+                  <a className="btn btn_close" onClick={close}>
+                    <AiOutlineClose />
+                  </a>
                   <CardBody>
                     <CardTitle className="py-5">
                       <h1 className="font-bold">Welcome back to</h1>
@@ -146,7 +149,7 @@ export default function Login() {
                               </div>
                             </FormGroup>
                           </Col>
-                          <Col className="form-default--text">
+                          <Col className="text-end">
                             <div className="text-reset opacity-60 fs-14 ">
                               <Link href="/auth/forgot_password">
                                 Forgot Password
