@@ -133,7 +133,11 @@ const Navigation_detail = () => {
                 />
               </div>
 
-              <div className="btn btn-create">Create listing</div>
+              <div className="btn btn-create">
+                <Link href="/createListing" passHref>
+                  Create listing
+                </Link>
+              </div>
 
               <div className="category position-relative">
                 <Link href="/detail" passHref>
