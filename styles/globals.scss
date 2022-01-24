@@ -16,12 +16,16 @@ $bg2-shadow: rgba(86, 86, 86, 0.7);
 
 $radius: 10px;
 $radius-collect: 25px;
+$border_gray_color: #e0e0e0;
+
+$text_color: #0c1a30;
 
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
+  color: $text_color;
 }
 
 a {
@@ -101,7 +105,7 @@ a {
           padding: 25px;
           border-radius: 100%;
 
-          border: 1px solid $gray3-color;
+          border: 1px solid $border_gray_color;
           text-align: center;
           justify-content: center;
           align-items: center;
@@ -172,7 +176,7 @@ a {
     a.btn_load {
       background: $bg-gray-color;
       border-radius: 10px;
-      border: 1px solid transparent;
+      border: 1px solid $red-color;
       color: $red-color;
       font-size: 16px;
       font-weight: 700;
