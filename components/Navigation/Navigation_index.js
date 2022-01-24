@@ -112,8 +112,12 @@ const Navigation_index = () => {
               <div className="input-group align-items-center input-search "></div>
 
               <div className="btn btn-create">
-                <AiOutlinePlus />
-                Create listing
+                <Link href="/createListing" passHref>
+                  <a>
+                    <AiOutlinePlus />
+                    Create listing
+                  </a>
+                </Link>
               </div>
 
               <div className="category">

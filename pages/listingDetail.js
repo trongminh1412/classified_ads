@@ -5,7 +5,7 @@ import Product_detail from 'components/Product_detail/Product_detail';
 import Product_listing from 'components/Product/Product_listing';
 import { Container, Row } from 'reactstrap';
 
-function Detail(props) {
+function listingDetail(props) {
   return (
     <>
       <Navigation_detail />
@@ -39,4 +39,4 @@ function Detail(props) {
   );
 }
 
-export default Detail;
+export default listingDetail;
